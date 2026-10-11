@@ -1,0 +1,1062 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#059669", "primary-container": "#047857", "primary-hover": "#065f46", "primary-light": "#ecfdf5", "primary-border": "#a7f3d0", "sidebar-bg": "#1e293b", "sidebar-surface": "#334155", "sidebar-active": "#0f172a", "slate-card": "#ffffff", "slate-border": "#e2e8f0", "slate-border-subtle": "#cbd5e1", "slate-muted": "#64748b", "slate-dark": "#0f172a", "slate-surface": "#f1f5f9", "background": "#f8fafc", "error": "#dc2626", "error-container": "#fee2e2", "error-text": "#991b1b" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.375rem", "xl": "0.5rem", "2xl": "0.75rem", "full": "9999px" }, "fontFamily": { "headline": ["Inter", "sans-serif"], "body": ["Inter", "sans-serif"] } } } };</script></head><body class="bg-background font-body text-slate-800 antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-sidebar-bg text-slate-200 z-50 flex flex-col border-r border-slate-700/60 shadow-lg overflow-y-auto"><div class="h-16 flex items-center gap-3 px-4 bg-slate-900/60 border-b border-slate-700/50"><img alt="NexaHCMS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UWKvZcnYaFIwMHB17QCqrT8jMjRi7paBT-hvHBcKHHqK6JxZ_EU6FFe9Cuf5SFUIT8-7mqzdFVQnFR-wjGWrlN2tbWIL9kxYz_Av8lncMxxfulpVtnx7poeOfwWkZ3xNfVJu2Qe6hlUkD246h8pn_3dXr9KTHc65voWjsdT3mIygx3-Wk5yRY_4e8-IkrBaXMf6jfuPZWVnuZb6oBIL8kkkJ4fIRiZpAQyv4kbtVjNkeDxOLPkRukyq65r"><div class="flex flex-col"><span class="text-base font-bold tracking-tight text-white">NexaHCMS</span><span class="text-[10px] text-emerald-400 font-semibold uppercase tracking-wider">Enterprise Suite</span></div></div><div class="p-3 mx-3 mt-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3"><div class="relative"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-slate-600" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-sidebar-bg"></span></div><div class="flex flex-col overflow-hidden"><span class="text-xs text-white truncate font-semibold">Dewi Kartika</span><span class="text-[11px] text-slate-400 truncate">HR Operations Lead</span></div></div><nav class="flex-1 px-3 py-4 space-y-1"><div class="px-2 pt-1 pb-1 text-[11px] uppercase tracking-wider text-slate-400 font-bold">UTAMA</div><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="dashboard-hcms-enterprise" href="#">Dashboard HCMS Enterprise</a><div class="px-2 pt-3 pb-1 text-[11px] uppercase tracking-wider text-slate-400 font-bold">KEPEGAWAIAN</div><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="data-karyawan-input-modal" href="#">Data Karyawan &amp; Input Modal</a><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="rekap-absensi-modal-pengajuan" href="#">Rekap Absensi &amp; Modal Pengajuan</a><div class="px-2 pt-3 pb-1 text-[11px] uppercase tracking-wider text-slate-400 font-bold">KOMPENSASI &amp; BENEFIT</div><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="register-gaji-payroll-review" href="#">Register Gaji &amp; Payroll Review</a><a class="block px-3 py-2 rounded-lg bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold shadow-sm transition-all" data-path="allowances-deductions" href="#">Allowances &amp; Deductions</a><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="payslip-karyawan" href="#">Payslip Karyawan</a><div class="px-2 pt-3 pb-1 text-[11px] uppercase tracking-wider text-slate-400 font-bold">LAPORAN &amp; AUDIT</div><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="laporan-export" href="#">Laporan &amp; Export</a><a class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-xs font-medium transition-all" data-path="pengaturan-role" href="#">Pengaturan &amp; Role RBAC</a></nav></aside><div class="pl-64 flex flex-col min-h-screen bg-background"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur-md z-40 flex items-center justify-between px-6 border-b border-slate-border shadow-sm"><div class="flex items-center gap-4 flex-1 max-w-xl"><button class="p-1.5 text-slate-500 hover:text-slate-800 transition-colors rounded-lg hover:bg-slate-100" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-1.5 text-xs text-slate-500"><span class="hover:text-slate-800 cursor-pointer">NexaHCMS</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="font-semibold text-slate-800">Enterprise Portal</span></div><div class="relative flex-1 hidden sm:block ml-2"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span><input class="w-full pl-9 pr-3 py-1.5 bg-slate-100/80 rounded-lg text-xs text-slate-800 placeholder:text-slate-400 border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all" placeholder="Cari modul, slip gaji, atau karyawan..." type="search"></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Notifikasi Kehadiran" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-white text-[10px] font-bold flex items-center justify-center rounded-full">3</span></button><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Permintaan Approval Payroll" type="button"><span class="material-symbols-outlined text-xl">fact_check</span><span class="absolute top-1 right-1 w-4 h-4 bg-emerald-600 text-white text-[10px] font-bold flex items-center justify-center rounded-full">5</span></button></div><span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 border border-slate-200 text-slate-700 font-bold">ID</span><span class="hidden lg:inline-flex px-2.5 py-1 rounded-full text-xs bg-slate-100 border border-slate-200 text-slate-700 font-semibold">HR Operations Lead</span><div class="flex items-center gap-1 pl-1"><img alt="Dewi Kartika Avatar" class="w-8 h-8 rounded-full object-cover border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="material-symbols-outlined text-slate-500 text-sm">arrow_drop_down</span></div></div></header><main class="flex-1 pt-20 w-full px-6 pb-8 bg-background"><div class="flex flex-col w-full">
+<!-- Breadcrumb and Quick Status Area -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-2">
+<nav class="flex items-center gap-1 text-xs text-slate-500">
+<a class="hover:text-emerald-600 transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span>
+<span class="">Home</span>
+</a>
+<span class="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
+<span class="hover:text-emerald-600 transition-colors cursor-pointer">Kompensasi &amp; Benefit</span>
+<span class="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
+<span class="font-semibold text-slate-800">Allowances &amp; Deductions</span>
+</nav>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-[11px] font-medium text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        Sinkronisasi Payroll Aktif: Periode April 2025
+      </span>
+<span class="hidden sm:inline-flex items-center gap-1 text-slate-500 text-[11px]">
+<span class="material-symbols-outlined text-sm">schedule</span>
+        Update: Hari ini, 09:42 WIB
+      </span>
+</div>
+</div>
+<!-- Page Header Title & Action Buttons -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 py-2">
+<div class="space-y-1">
+<div class="flex items-center gap-2.5">
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight">
+          Master &amp; Alokasi Komponen Gaji (Allowances &amp; Deductions)
+        </h1>
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          18 Komponen
+        </span>
+</div>
+<p class="text-xs text-slate-500 max-w-4xl">
+        Kelola master tunjangan tetap, tunjangan variabel, potongan BPJS, PPh 21, dan potongan ad-hoc/kasbon perusahaan sesuai regulasi TER DJP terbaru.
+      </p>
+</div>
+<!-- Action Toolbar -->
+<div class="flex flex-wrap items-center gap-2 shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 bg-white text-slate-700 hover:bg-slate-50 rounded-lg text-xs font-medium border border-slate-border shadow-sm transition-all" id="openAuditBtn" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">history</span>
+<span class="">Riwayat Perubahan Tarif</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 bg-white text-slate-700 hover:bg-slate-50 rounded-lg text-xs font-medium border border-slate-border shadow-sm transition-all" id="importBtn" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">upload_file</span>
+<span class="">Impor Massal XLSX</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 text-white hover:bg-emerald-700 rounded-lg text-xs font-semibold shadow-sm transition-all" id="openModalBtn" type="button">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span class="">+ Tambah Komponen Baru</span>
+</button>
+</div>
+</div>
+<!-- KPI Summary 4-Column Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-3">
+<!-- Card 1 -->
+<div class="bg-slate-card rounded-xl p-4 border border-slate-border shadow-sm hover:shadow transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">TOTAL KOMPONEN AKTIF</span>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="text-3xl font-bold text-slate-900">18</span>
+<span class="text-xs text-slate-500">Komponen</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+<span class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<strong>11</strong> Tunjangan
+        </span>
+<span class="inline-flex items-center gap-1 text-slate-500">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<strong>7</strong> Potongan
+        </span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-slate-card rounded-xl p-4 border border-slate-border shadow-sm hover:shadow transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">TOTAL ALOKASI BULANAN</span>
+<div class="pt-1">
+<span class="text-2xl font-bold text-slate-900">Rp 577.900.000</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm text-emerald-600">trending_up</span>
+<span class="">Rata-rata <strong class="text-slate-700">2.3 komponen</strong> / pegawai</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-slate-card rounded-xl p-4 border border-slate-border shadow-sm hover:shadow transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">KOMPONEN KENA PAJAK (TAXABLE)</span>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="text-3xl font-bold text-slate-900">14</span>
+<span class="text-xs text-slate-500">Komponen</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">fact_check</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center gap-1 text-xs text-slate-600">
+<span class="material-symbols-outlined text-sm text-emerald-600">verified</span>
+<span class="">Sesuai skema <strong class="text-slate-800">PPh 21 TER</strong> Terkoreksi</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-slate-card rounded-xl p-4 border border-slate-border shadow-sm hover:shadow transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">PINJAMAN &amp; KASBON BERJALAN</span>
+<div class="pt-1">
+<span class="text-2xl font-bold text-error">Rp 34.200.000</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/60 border border-red-200 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">credit_card_off</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span>
+<strong class="text-slate-700">12 Pegawai</strong> aktif cicilan
+        </span>
+<a class="text-emerald-600 hover:text-emerald-700 font-semibold" href="#kasbon">Kelola</a>
+</div>
+</div>
+</div>
+<!-- Operational Workspace: Tabs & Table Card -->
+<div class="mt-6 bg-slate-card rounded-xl border border-slate-border shadow-sm overflow-hidden">
+<!-- Clean Tab Navigation with Emerald Accent -->
+<div class="bg-slate-50/80 border-b border-slate-border px-4 pt-3 flex flex-wrap items-center gap-2">
+<button class="tab-button active px-4 py-2.5 rounded-t-lg text-xs flex items-center gap-2 bg-white border-t-2 border-emerald-500 border-x border-b-transparent text-emerald-700 font-bold shadow-[0_-1px_3px_rgba(0,0,0,0.03)] transition-all" data-tab="tab-master" type="button">
+<span class="material-symbols-outlined text-base text-emerald-600">format_list_bulleted</span>
+<span class="">Master Komponen (Allowance &amp; Deduction)</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">18</span>
+</button>
+<button class="tab-button px-4 py-2.5 rounded-t-lg text-xs flex items-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all" data-tab="tab-karyawan" type="button">
+<span class="material-symbols-outlined text-base">badge</span>
+<span class="">Komponen per Karyawan (Tetap/Berulang)</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-600 text-[10px] font-bold">248</span>
+</button>
+<button class="tab-button px-4 py-2.5 rounded-t-lg text-xs flex items-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all" data-tab="tab-adhoc" type="button">
+<span class="material-symbols-outlined text-base">flash_on</span>
+<span class="">Komponen Sekali Bayar (Ad-hoc)</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-600 text-[10px] font-bold">14</span>
+</button>
+<button class="tab-button px-4 py-2.5 rounded-t-lg text-xs flex items-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all" data-tab="tab-kasbon" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+<span class="">Kasbon &amp; Pinjaman Karyawan</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-error-container text-error-text text-[10px] font-bold">12</span>
+</button>
+</div>
+<!-- Active Tab Workspace Container -->
+<div class="p-4 space-y-4">
+<!-- Filter Toolbar -->
+<div class="bg-slate-50/70 border border-slate-200/80 rounded-xl p-2.5 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-2.5">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-white rounded-lg text-xs text-slate-800 placeholder:text-slate-400 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm" id="tableSearchInput" placeholder="Cari kode atau nama komponen (cth: ALW-POS, BPJS, Overtime)..." type="search">
+</div>
+<!-- Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center gap-1.5 bg-white border border-slate-200 px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-sm text-slate-500">tune</span>
+<span class="text-[11px] text-slate-500 font-medium">Tipe:</span>
+<select class="bg-transparent text-slate-800 text-xs focus:outline-none cursor-pointer" id="filterType">
+<option value="ALL">Semua Tipe</option>
+<option value="ALLOWANCE">Allowance / Tunjangan</option>
+<option value="DEDUCTION">Deduction / Potongan</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-white border border-slate-200 px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="text-[11px] text-slate-500 font-medium">Sifat:</span>
+<select class="bg-transparent text-slate-800 text-xs focus:outline-none cursor-pointer" id="filterNature">
+<option value="ALL">Semua</option>
+<option value="TETAP">Tetap Bulanan</option>
+<option value="VARIABEL">Variabel / Per Kehadiran</option>
+<option value="REGULASI">Formula Regulasi</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-white border border-slate-200 px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="text-[11px] text-slate-500 font-medium">Pajak:</span>
+<select class="bg-transparent text-slate-800 text-xs focus:outline-none cursor-pointer" id="filterTax">
+<option value="ALL">Semua Status</option>
+<option value="TAXABLE">Taxable (Kena Pajak)</option>
+<option value="NON_TAXABLE">Non-Taxable</option>
+</select>
+</div>
+<button class="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-all" id="resetFilterBtn" title="Reset Filter" type="button">
+<span class="material-symbols-outlined text-base">filter_alt_off</span>
+</button>
+</div>
+</div>
+<!-- Clean Data Table Grid -->
+<div class="overflow-x-auto rounded-lg border border-slate-200">
+<table class="w-full text-left text-xs">
+<thead>
+<tr class="bg-slate-50 border-b border-slate-200 text-slate-600 text-[11px]">
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">KODE &amp; NAMA KOMPONEN</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">SIFAT</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">METODE HITUNG</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">KEPATUHAN PAJAK</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">PENERIMA / TERDAMPAK</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold">STATUS</th>
+<th class="py-3 px-4 uppercase tracking-wider font-semibold text-right">AKSI</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100" id="componentTableBody">
+<!-- Row 1: ALW-POS -->
+<tr class="bg-white hover:bg-slate-50/70 transition-colors table-row-item" data-nature="TETAP" data-tax="TAXABLE" data-type="ALLOWANCE">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-700 text-[11px] font-bold">
+                    ALW
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">ALW-POS</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold uppercase">
+                        Allowance
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Tunjangan Jabatan</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Tetap (Bulanan)</span>
+<span class="text-[11px] text-slate-400">Diproses tiap cut-off</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">attach_money</span>
+                  Nominal Tetap (Grade Based)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Taxable (PPh 21)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">45 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Level Spv - Direksi</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="ALW-POS" data-name="Tunjangan Jabatan" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: ALW-TRN -->
+<tr class="bg-slate-50/40 hover:bg-slate-50 transition-colors table-row-item" data-nature="VARIABEL" data-tax="TAXABLE" data-type="ALLOWANCE">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-700 text-[11px] font-bold">
+                    ALW
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">ALW-TRN</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold uppercase">
+                        Allowance
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Tunjangan Transport</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Variabel (Kehadiran)</span>
+<span class="text-[11px] text-slate-400">Biometrik check-in</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">pin_drop</span>
+                  Per Hari Kerja (Rp 35.000)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Taxable (PPh 21)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">248 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Semua staf on-site</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="ALW-TRN" data-name="Tunjangan Transport" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 3: ALW-MEL -->
+<tr class="bg-white hover:bg-slate-50/70 transition-colors table-row-item" data-nature="VARIABEL" data-tax="NON_TAXABLE" data-type="ALLOWANCE">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-700 text-[11px] font-bold">
+                    ALW
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">ALW-MEL</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold uppercase">
+                        Allowance
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Uang Makan Harian</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Variabel (Kehadiran)</span>
+<span class="text-[11px] text-slate-400">Min. 4 jam kerja</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">restaurant</span>
+                  Per Hari Kerja (Rp 40.000)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-[10px] font-semibold">
+                  Non-Taxable (Natura)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">210 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Non-Manajerial</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="ALW-MEL" data-name="Uang Makan Harian" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 4: ALW-OVT -->
+<tr class="bg-slate-50/40 hover:bg-slate-50 transition-colors table-row-item" data-nature="VARIABEL" data-tax="TAXABLE" data-type="ALLOWANCE">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-700 text-[11px] font-bold">
+                    ALW
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">ALW-OVT</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold uppercase">
+                        Allowance
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Lembur / Overtime (Depnaker)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Variabel / Formula</span>
+<span class="text-[11px] text-slate-400">Permenaker No. 102</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">functions</span>
+                  1/173 x Upah x Multiplier
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Taxable (PPh 21)
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">Berdasarkan SPL</span>
+<span class="block text-[11px] text-slate-400">Surat Perintah Lembur</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="ALW-OVT" data-name="Lembur / Overtime" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 5: DED-BPJ-KES -->
+<tr class="bg-white hover:bg-slate-50/70 transition-colors table-row-item" data-nature="REGULASI" data-tax="TAXABLE" data-type="DEDUCTION">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-error text-[11px] font-bold">
+                    DED
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">DED-BPJ-KES</span>
+<span class="px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-error-text text-[10px] font-semibold uppercase">
+                        Deduction
+                      </span>
+</div>
+<span class="text-xs text-slate-500">BPJS Kesehatan (4% Perusahaan, 1% Karyawan)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Formula Regulasi</span>
+<span class="text-[11px] text-slate-400">Cap Max Rp 12.000.000</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">percent</span>
+                  1% Beban Gaji Karyawan
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Tax Deduction
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">248 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Peserta BPJS terdaftar</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="DED-BPJ-KES" data-name="BPJS Kesehatan" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 6: DED-BPJ-TK -->
+<tr class="bg-slate-50/40 hover:bg-slate-50 transition-colors table-row-item" data-nature="REGULASI" data-tax="TAXABLE" data-type="DEDUCTION">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-error text-[11px] font-bold">
+                    DED
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">DED-BPJ-TK</span>
+<span class="px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-error-text text-[10px] font-semibold uppercase">
+                        Deduction
+                      </span>
+</div>
+<span class="text-xs text-slate-500">BPJS Ketenagakerjaan (JHT 2%, JP 1%)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Formula Regulasi</span>
+<span class="text-[11px] text-slate-400">JHT &amp; Jaminan Pensiun</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">percent</span>
+                  3% Total Potongan Pokok
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Pengurang Bruto
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">248 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Karyawan PKWTT &amp; PKWT</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="DED-BPJ-TK" data-name="BPJS Ketenagakerjaan" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 7: DED-PPH21 -->
+<tr class="bg-white hover:bg-slate-50/70 transition-colors table-row-item" data-nature="REGULASI" data-tax="TAXABLE" data-type="DEDUCTION">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-error text-[11px] font-bold">
+                    DED
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">DED-PPH21</span>
+<span class="px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-error-text text-[10px] font-semibold uppercase">
+                        Deduction
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Pemotongan Pajak PPh 21 TER (Kategori A/B/C)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Tabel TER DJP</span>
+<span class="text-[11px] text-slate-400">PP 58/2023 &amp; PMK 168</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">table_view</span>
+                  Tarif Efektif Rata-rata DJP
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold">
+                  Kewajiban Pajak
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">198 Karyawan</span>
+<span class="block text-[11px] text-slate-400">Penghasilan di atas PTKP</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="DED-PPH21" data-name="PPh 21 TER" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 8: DED-LAT -->
+<tr class="bg-slate-50/40 hover:bg-slate-50 transition-colors table-row-item" data-nature="VARIABEL" data-tax="NON_TAXABLE" data-type="DEDUCTION">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-error text-[11px] font-bold">
+                    DED
+                  </span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900">DED-LAT</span>
+<span class="px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-error-text text-[10px] font-semibold uppercase">
+                        Deduction
+                      </span>
+</div>
+<span class="text-xs text-slate-500">Potongan Keterlambatan Absensi (Late Penalty)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-800 font-medium">Variabel Kehadiran</span>
+<span class="text-[11px] text-slate-400">Rekapitulasi Mesin Sidik</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-xs text-slate-700">
+<span class="material-symbols-outlined text-sm text-slate-400">timelapse</span>
+                  Rp 1.000 / Menit keterlambatan
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-[10px] font-semibold">
+                  Non-Taxable
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="text-xs font-medium text-slate-800">Berdasarkan Absensi</span>
+<span class="block text-[11px] text-slate-400">Grace period 15 menit</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Aktif
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="action-btn-edit p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" data-code="DED-LAT" data-name="Potongan Keterlambatan" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-slate-100 transition-all" title="Detail Formula" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[11px] border border-slate-200 transition-all" type="button">
+                    Atur Formula
+                  </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-500">
+<div class="flex items-center gap-2">
+<span class="">Menampilkan</span>
+<select class="bg-white border border-slate-200 px-2 py-1 rounded text-slate-800 text-xs focus:outline-none cursor-pointer">
+<option>8</option>
+<option>15</option>
+<option>25</option>
+<option>Semua (18)</option>
+</select>
+<span class="">dari <strong class="text-slate-700">18</strong> data master komponen</span>
+</div>
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded bg-white border border-slate-200 text-slate-400 hover:text-slate-800 disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">first_page</span>
+</button>
+<button class="p-1 rounded bg-white border border-slate-200 text-slate-400 hover:text-slate-800 disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-emerald-600 text-white font-bold text-xs" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 font-medium text-xs" type="button">2</button>
+<button class="p-1 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-800" type="button">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="p-1 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-800" type="button">
+<span class="material-symbols-outlined text-sm">last_page</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Bento: Audit Trail & Formula Quick Engine -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+<!-- Left: Audit Trail Card (2 Cols) -->
+<div class="lg:col-span-2 bg-slate-card rounded-xl p-5 border border-slate-border shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600">history_toggle_off</span>
+<h2 class="text-sm font-bold text-slate-900">Audit Trail Singkat Perubahan Komponen Terakhir</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[11px] font-semibold border border-slate-200">Log Transaksi Sistem</span>
+</div>
+<div class="space-y-3 pt-3">
+<div class="p-3 rounded-lg bg-slate-50/70 border border-slate-200/70 flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base">rule</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-900">Pembaruan Skema Tarif TER DJP 2024 (PP 58/2023)</p>
+<p class="text-[11px] text-slate-500">Penyesuaian batas kategori A, B, dan C pada komponen <span class="font-semibold text-slate-800">DED-PPH21</span> oleh <span class="text-emerald-700 font-semibold">Dewi Kartika</span></p>
+</div>
+</div>
+<span class="text-[11px] text-slate-400 shrink-0">12 Apr 2025, 14:15 WIB</span>
+</div>
+<div class="p-3 rounded-lg bg-slate-50/70 border border-slate-200/70 flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-900">Penyesuaian Nilai Default Tunjangan Transport</p>
+<p class="text-[11px] text-slate-500">Kenaikan dari Rp 30.000 menjadi Rp 35.000 per hari kerja efektif untuk seluruh unit operasi Jabodetabek.</p>
+</div>
+</div>
+<span class="text-[11px] text-slate-400 shrink-0">08 Apr 2025, 09:30 WIB</span>
+</div>
+<div class="p-3 rounded-lg bg-slate-50/70 border border-slate-200/70 flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-red-100 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base">account_balance</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-900">Penerapan Batas Maksimal BPJS Ketenagakerjaan JP</p>
+<p class="text-[11px] text-slate-500">Plafon batas upah tertinggi Jaminan Pensiun diselaraskan menjadi Rp 10.042.300 sesuai ketetapan BPJS Ketenagakerjaan.</p>
+</div>
+</div>
+<span class="text-[11px] text-slate-400 shrink-0">01 Mar 2025, 08:00 WIB</span>
+</div>
+</div>
+</div>
+<!-- Right: Payroll Compliance Engine Card (1 Col) -->
+<div class="bg-slate-card rounded-xl p-5 border border-slate-border shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 pb-1">
+<span class="material-symbols-outlined text-emerald-600">verified_user</span>
+<h2 class="text-sm font-bold text-slate-900">Validasi Regulasi Payroll</h2>
+</div>
+<p class="text-xs text-slate-500 mt-1">
+          Komponen aktif telah memenuhi ketentuan perundangan ketenagakerjaan dan perpajakan RI.
+        </p>
+<div class="mt-4 space-y-2">
+<div class="flex items-center justify-between p-2.5 rounded bg-slate-50 border border-slate-200/70">
+<span class="text-xs text-slate-700">Uji Capping BPJS Kesehatan</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-bold">
+<span class="material-symbols-outlined text-sm text-emerald-600">check_circle</span> Valid (Rp 12 Jt)
+            </span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-slate-50 border border-slate-200/70">
+<span class="text-xs text-slate-700">Formula Lembur Depnaker</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-bold">
+<span class="material-symbols-outlined text-sm text-emerald-600">check_circle</span> 1/173 Upah
+            </span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-slate-50 border border-slate-200/70">
+<span class="text-xs text-slate-700">Tarif Efektif Rata-rata DJP</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-bold">
+<span class="material-symbols-outlined text-sm text-emerald-600">check_circle</span> TER 2024 Sinkron
+            </span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2">
+<button class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base text-emerald-600">download</span>
+<span class="">Unduh Matriks Komponen (PDF Ringkasan)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Dialog: Tambah / Edit Master Komponen Gaji -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden transition-opacity" id="componentModal">
+<div class="bg-white rounded-xl shadow-2xl border border-slate-200 w-full max-w-2xl mx-4 overflow-hidden transform transition-all">
+<!-- Modal Header -->
+<div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-lg">tune</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900" id="modalTitle">Tambah / Edit Master Komponen Gaji</h3>
+<p class="text-xs text-slate-500">Konfigurasi parameter dasar, tipe perhitungan, dan aspek pajak</p>
+</div>
+</div>
+<button class="p-1 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition-all" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body Form -->
+<form class="p-6 space-y-4 max-h-[768px] overflow-y-auto" id="componentForm">
+<!-- 1. Tipe Komponen: Radio Pills -->
+<div class="space-y-1.5">
+<label class="block text-xs text-slate-800 font-semibold">Tipe Komponen <span class="text-error">*</span></label>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 has-[:checked]:bg-emerald-50 has-[:checked]:border-emerald-300 has-[:checked]:text-emerald-800 transition-all">
+<input checked="" class="accent-emerald-600" name="modalComponentType" type="radio" value="ALLOWANCE">
+<span class="text-xs font-bold">Tunjangan (Allowance)</span>
+</label>
+<label class="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 has-[:checked]:bg-error-container/60 has-[:checked]:border-red-300 has-[:checked]:text-error-text transition-all">
+<input class="accent-red-600" name="modalComponentType" type="radio" value="DEDUCTION">
+<span class="text-xs font-bold">Potongan (Deduction)</span>
+</label>
+</div>
+</div>
+<!-- 2. Kode & Nama Komponen: Dual Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="space-y-1 sm:col-span-1">
+<label class="block text-xs text-slate-800 font-semibold" for="inputModalCode">Kode Komponen <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 uppercase placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm" id="inputModalCode" placeholder="ALW-COMM" required="" type="text">
+<span class="text-[11px] text-slate-400">Maksimal 10 karakter</span>
+</div>
+<div class="space-y-1 sm:col-span-2">
+<label class="block text-xs text-slate-800 font-semibold" for="inputModalName">Nama Komponen <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm" id="inputModalName" placeholder="Tunjangan Komunikasi &amp; Pulsa" required="" type="text">
+<span class="text-[11px] text-slate-400">Nama resmi yang tampil di Slip Gaji</span>
+</div>
+</div>
+<!-- 3. Sifat & Metode Perhitungan: Dual Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="space-y-1">
+<label class="block text-xs text-slate-800 font-semibold" for="selectModalNature">Sifat Komponen <span class="text-error">*</span></label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm cursor-pointer" id="selectModalNature">
+<option value="TETAP">Tetap Bulanan</option>
+<option value="VARIABEL">Variabel Berdasarkan Kehadiran</option>
+<option value="ADHOC">Sekali Bayar / Ad-hoc</option>
+<option value="REGULASI">Formula Regulasi (BPJS/Pajak)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block text-xs text-slate-800 font-semibold" for="selectModalMethod">Metode Perhitungan <span class="text-error">*</span></label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm cursor-pointer" id="selectModalMethod">
+<option value="FIXED">Nominal Tetap (Rp)</option>
+<option value="PERCENTAGE">Persentase dari Gaji Pokok (%)</option>
+<option value="DAILY">Nominal per Hari Hadir</option>
+<option value="FORMULA">Formula Skrip Kustom</option>
+</select>
+</div>
+</div>
+<!-- 4. Nilai Standar / Default -->
+<div class="space-y-1">
+<label class="block text-xs text-slate-800 font-semibold" for="inputModalDefaultValue">Nilai Standar / Default <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base">payments</span>
+<input class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm" id="inputModalDefaultValue" placeholder="Rp 500.000" type="text" value="Rp 500.000">
+</div>
+<span class="text-[11px] text-slate-400">Dapat disesuaikan individual per penempatan level jabatan</span>
+</div>
+<!-- 5. Aspek Perpajakan (Tax Compliance) -->
+<div class="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-2">
+<div class="flex items-start gap-2.5">
+<input checked="" class="mt-0.5 accent-emerald-600 w-4 h-4 rounded cursor-pointer" id="checkModalTaxable" type="checkbox">
+<div>
+<label class="text-xs font-bold text-slate-900 cursor-pointer" for="checkModalTaxable">
+                Termasuk objek pajak PPh 21 (Taxable Income)
+              </label>
+<p class="text-[11px] text-slate-500 mt-0.5">
+                Jika dicentang, komponen ini akan diakumulasikan ke dalam penghasilan bruto kena pajak pada kalkulasi tarif TER DJP periode berjalan.
+              </p>
+</div>
+</div>
+</div>
+</form>
+<!-- Modal Footer -->
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-end gap-3">
+<button class="px-4 py-2 bg-white text-slate-700 hover:bg-slate-100 rounded-lg text-xs font-medium border border-slate-200 transition-all shadow-sm" id="cancelModalBtn" type="button">
+          Batal
+        </button>
+<button class="flex items-center gap-1.5 px-5 py-2 bg-emerald-600 text-white hover:bg-emerald-700 rounded-lg text-xs font-semibold shadow-sm transition-all" id="saveComponentBtn" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+<span class="">Simpan Komponen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Modal Controller
+    const modal = document.getElementById('componentModal');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const saveComponentBtn = document.getElementById('saveComponentBtn');
+    const inputCode = document.getElementById('inputModalCode');
+    const inputName = document.getElementById('inputModalName');
+    const modalTitle = document.getElementById('modalTitle');
+
+    function showModal(isEdit = false, code = '', name = '') {
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      if (isEdit) {
+        modalTitle.textContent = 'Edit Master Komponen Gaji: ' + code;
+        inputCode.value = code;
+        inputName.value = name;
+        inputCode.setAttribute('readonly', 'true');
+      } else {
+        modalTitle.textContent = 'Tambah Master Komponen Gaji Baru';
+        inputCode.value = '';
+        inputName.value = '';
+        inputCode.removeAttribute('readonly');
+      }
+    }
+
+    function hideModal() {
+      if (!modal) return;
+      modal.classList.add('hidden');
+    }
+
+    if (openModalBtn) {
+      openModalBtn.addEventListener('click', function () {
+        showModal(false);
+      });
+    }
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', hideModal);
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', hideModal);
+
+    // Close on backdrop click
+    if (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) hideModal();
+      });
+    }
+
+    // Attach edit button listeners
+    const editButtons = document.querySelectorAll('.action-btn-edit');
+    editButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const code = this.getAttribute('data-code') || '';
+        const name = this.getAttribute('data-name') || '';
+        showModal(true, code, name);
+      });
+    });
+
+    if (saveComponentBtn) {
+      saveComponentBtn.addEventListener('click', function () {
+        alert('Master komponen berhasil disimpan ke basis data payroll!');
+        hideModal();
+      });
+    }
+
+    // Table Filtering Controller
+    const searchInput = document.getElementById('tableSearchInput');
+    const filterType = document.getElementById('filterType');
+    const filterNature = document.getElementById('filterNature');
+    const filterTax = document.getElementById('filterTax');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+    const rows = document.querySelectorAll('.table-row-item');
+
+    function applyFilters() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+      const typeVal = filterType?.value || 'ALL';
+      const natureVal = filterNature?.value || 'ALL';
+      const taxVal = filterTax?.value || 'ALL';
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const rType = row.getAttribute('data-type') || '';
+        const rNature = row.getAttribute('data-nature') || '';
+        const rTax = row.getAttribute('data-tax') || '';
+
+        const matchQuery = !query || text.includes(query);
+        const matchType = typeVal === 'ALL' || rType === typeVal;
+        const matchNature = natureVal === 'ALL' || rNature === natureVal;
+        const matchTax = taxVal === 'ALL' || rTax === taxVal;
+
+        if (matchQuery && matchType && matchNature && matchTax) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (filterType) filterType.addEventListener('change', applyFilters);
+    if (filterNature) filterNature.addEventListener('change', applyFilters);
+    if (filterTax) filterTax.addEventListener('change', applyFilters);
+
+    if (resetFilterBtn) {
+      resetFilterBtn.addEventListener('click', function () {
+        if (searchInput) searchInput.value = '';
+        if (filterType) filterType.value = 'ALL';
+        if (filterNature) filterNature.value = 'ALL';
+        if (filterTax) filterTax.value = 'ALL';
+        applyFilters();
+      });
+    }
+
+    // Tab buttons active states switcher
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        tabButtons.forEach(b => {
+          b.classList.remove('bg-white', 'border-t-2', 'border-emerald-500', 'border-x', 'border-b-transparent', 'text-emerald-700', 'font-bold', 'shadow-[0_-1px_3px_rgba(0,0,0,0.03)]');
+          b.classList.add('text-slate-600');
+        });
+        this.classList.add('bg-white', 'border-t-2', 'border-emerald-500', 'border-x', 'border-b-transparent', 'text-emerald-700', 'font-bold', 'shadow-[0_-1px_3px_rgba(0,0,0,0.03)]');
+        this.classList.remove('text-slate-600');
+      });
+    });
+
+    // Secondary button helpers
+    const importBtn = document.getElementById('importBtn');
+    if (importBtn) {
+      importBtn.addEventListener('click', function () {
+        alert('Fitur Impor Massal XLSX: Silakan siapkan berkas template payroll komponen.');
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-white py-4 px-6 border-t border-slate-border shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-500 text-xs"><div class="">© 2025 NexaHCMS Enterprise Suite. Version 2.4.0-LTS.</div><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="">Status: Connected (Production DB)</span></div></footer></div>
+
+</body></html>

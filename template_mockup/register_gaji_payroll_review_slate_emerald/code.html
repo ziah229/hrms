@@ -1,0 +1,997 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#059669",
+        "primary-hover": "#047857",
+        "primary-dark": "#065f46",
+        "primary-light": "#d1fae5",
+        "primary-accent": "#10b981",
+        "sidebar": "#0f172a",
+        "sidebar-surface": "#1e293b",
+        "sidebar-border": "#334155",
+        "sidebar-text": "#94a3b8",
+        "sidebar-text-active": "#ffffff",
+        "background": "#f8fafc",
+        "surface": "#ffffff",
+        "surface-container": "#f1f5f9",
+        "surface-container-low": "#f8fafc",
+        "surface-container-high": "#e2e8f0",
+        "on-surface": "#0f172a",
+        "secondary": "#64748b",
+        "outline": "#cbd5e1",
+        "outline-variant": "#e2e8f0",
+        "error": "#dc2626",
+        "error-container": "#fee2e2",
+        "on-error-container": "#991b1b"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.375rem",
+        "xl": "0.5rem",
+        "2xl": "0.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem",
+        "margin": "1.5rem"
+      },
+      fontFamily: {
+        "label-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "label-lg": ["Inter"],
+        "body-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "headline-sm": ["Inter"],
+        "headline-md": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-lg": ["Inter"]
+      },
+      fontSize: {
+        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+        "label-lg": ["13px", { "lineHeight": "18px", "fontWeight": "600" }],
+        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+        "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+        "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "display-lg": ["30px", { "lineHeight": "38px", "fontWeight": "700" }]
+      }
+    }
+  }
+};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-sidebar text-slate-200 z-50 flex flex-col border-r border-sidebar-border overflow-y-auto"><div class="h-16 flex items-center gap-space-sm px-space-md bg-sidebar border-b border-sidebar-border/60"><div class="flex items-center w-full"><img src="https://lh3.googleusercontent.com/aida/AEtjO1UWKvZcnYaFIwMHB17QCqrT8jMjRi7paBT-hvHBcKHHqK6JxZ_EU6FFe9Cuf5SFUIT8-7mqzdFVQnFR-wjGWrlN2tbWIL9kxYz_Av8lncMxxfulpVtnx7poeOfwWkZ3xNfVJu2Qe6hlUkD246h8pn_3dXr9KTHc65voWjsdT3mIygx3-Wk5yRY_4e8-IkrBaXMf6jfuPZWVnuZb6oBIL8kkkJ4fIRiZpAQyv4kbtVjNkeDxOLPkRukyq65r" alt="NexaHCMS Enterprise Suite" class="h-10 w-auto object-contain"></div></div><div class="p-space-sm mx-space-sm mt-3 rounded-xl bg-sidebar-surface border border-sidebar-border flex items-center gap-space-sm"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-emerald-500/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-sidebar-surface"></span></div><div class="flex flex-col overflow-hidden"><span class="font-label-lg text-label-lg text-white truncate">Dewi Kartika</span><span class="font-label-sm text-label-sm text-emerald-400 truncate">HR Operations Lead</span></div></div><nav class="flex-1 px-space-sm py-space-md space-y-space-xs"><div class="px-space-sm pt-space-xs pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-slate-400">UTAMA</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg text-slate-400">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Live</span></a><div class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-slate-400">KEPEGAWAIAN</div><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="data-karyawan" href="#"><span class="material-symbols-outlined text-lg text-slate-400">group</span><span class="font-label-lg text-label-lg">Data Karyawan</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="daftar-karyawan" href="#">Daftar Karyawan</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="tambah-karyawan" href="#">Tambah Karyawan</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="master-departemen" href="#">Master Departemen</a></div></div><div class="space-y-0.5 pt-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="absensi-karyawan" href="#"><span class="material-symbols-outlined text-lg text-slate-400">event_available</span><span class="font-label-lg text-label-lg">Absensi Karyawan</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="rekap-harian" href="#">Rekap Harian</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="cuti-izin" href="#">Cuti &amp; Izin</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="lembur" href="#">Lembur</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="jadwal-shift" href="#">Jadwal / Shift</a></div></div><div class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-slate-400">KOMPENSASI &amp; BENEFIT</div><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="data-gaji" href="#"><span class="material-symbols-outlined text-lg text-slate-400">account_balance_wallet</span><span class="font-label-lg text-label-lg">Data Gaji</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="gaji-pokok" href="#">Gaji Pokok</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="riwayat-perubahan" href="#">Riwayat Perubahan</a></div></div><div class="space-y-0.5 pt-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="allowances-deductions" href="#"><span class="material-symbols-outlined text-lg text-slate-400">sell</span><span class="font-label-lg text-label-lg">Allowances &amp; Deductions</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="master-komponen" href="#">Master Komponen</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="komponen-karyawan" href="#">Komponen Karyawan</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="sekali-bayar" href="#">Sekali Bayar</a></div></div><div class="space-y-0.5 pt-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-white font-medium bg-sidebar-surface" data-path="register-gaji" href="#"><span class="material-symbols-outlined text-lg text-emerald-400">receipt_long</span><span class="font-label-lg text-label-lg">Register Gaji</span></a><div class="pl-8 pr-space-xs space-y-1"><a aria-current="page" class="block py-1.5 px-2.5 rounded font-label-md text-label-md bg-emerald-600 text-white font-semibold shadow-sm" data-path="periode-gaji" href="#">Periode Gaji</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="review-approval" href="#">Review &amp; Approval</a></div></div><div class="space-y-0.5 pt-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="payslip" href="#"><span class="material-symbols-outlined text-lg text-slate-400">payments</span><span class="font-label-lg text-label-lg">Payslip</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="daftar-payslip" href="#">Daftar Payslip</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="kirim-email" href="#">Kirim Email</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="payslip-saya" href="#">Payslip Saya</a></div></div><div class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-slate-400">LAPORAN &amp; SISTEM</div><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="laporan-export" href="#"><span class="material-symbols-outlined text-lg text-slate-400">bar_chart</span><span class="font-label-lg text-label-lg">Laporan &amp; Export</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="export-xlsx-pdf" href="#">Export XLSX/PDF</a></div></div><div class="space-y-0.5 pt-space-xs mb-space-md"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-sidebar-surface hover:text-white transition-all" data-path="pengaturan-role" href="#"><span class="material-symbols-outlined text-lg text-slate-400">settings</span><span class="font-label-lg text-label-lg">Pengaturan &amp; Role</span></a><div class="pl-8 pr-space-xs space-y-1"><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="user-role-rbac" href="#">User &amp; Role RBAC</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="hari-libur" href="#">Hari Libur</a><a class="block py-1 text-slate-400 hover:text-emerald-300 font-body-sm text-body-sm transition-colors" data-path="audit-log" href="#">Audit Log</a></div></div></nav></aside><div class="pl-64 flex flex-col min-h-screen bg-slate-50"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur-md z-40 flex items-center justify-between px-margin border-b border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs text-slate-500 hover:text-slate-800 transition-colors rounded-lg hover:bg-slate-100" type="button"><span class="material-symbols-outlined">menu</span></button><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-slate-500"><span class="hover:text-slate-800 cursor-pointer">Home</span><span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span><span class="font-label-md text-label-md text-slate-800">Dashboard</span></div><div class="relative flex-1 hidden sm:block ml-space-sm"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-slate-100/80 border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:border-emerald-500 transition-all" placeholder="Cari menu atau karyawan..." type="search"></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Notifikasi Kehadiran" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-white font-label-sm text-label-sm flex items-center justify-center rounded-full">3</span></button><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Permintaan Approval Cuti" type="button"><span class="material-symbols-outlined">fact_check</span><span class="absolute top-1 right-1 w-4 h-4 bg-emerald-600 text-white font-label-sm text-label-sm flex items-center justify-center rounded-full">5</span></button></div><span class="px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-600 font-bold border border-slate-200">ID</span><span class="hidden lg:inline-flex px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-semibold">HR Admin - All Access</span><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="material-symbols-outlined text-slate-500 text-sm">arrow_drop_down</span></div></div></header><main class="flex-1 pt-16 w-full px-margin pb-space-lg bg-slate-50"><div class="flex flex-col w-full space-y-space-md">
+<!-- TOP NOTIFICATION & METADATA BAR -->
+<div class="w-full bg-white border border-slate-200/90 rounded-xl p-space-sm shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm text-slate-600">
+<span class="material-symbols-outlined text-emerald-600 text-xl">verified_user</span>
+<span class="font-body-sm text-body-sm text-slate-800">
+        Batch No: <strong class="font-label-md text-label-md text-emerald-700">BATCH/2025/03/PAY-01</strong>
+</span>
+<span class="text-slate-300 font-label-md">•</span>
+<span class="font-body-sm text-body-sm text-slate-500">Cut-off Kehadiran: 21 Feb 2025 - 20 Mar 2025</span>
+<span class="text-slate-300 font-label-md">•</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+        248 Karyawan Terdaftar
+      </span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-slate-500">
+<span class="material-symbols-outlined text-base text-emerald-600">schedule</span>
+<span class="">Sinkronisasi Terakhir: Hari ini, 09:42 WIB oleh Dewi Kartika</span>
+</div>
+</div>
+<!-- TITLE & ACTIONS HEADER -->
+<div class="w-full bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-2xl">account_balance_wallet</span>
+<h1 class="font-headline-lg text-headline-lg text-slate-900 tracking-tight">Register Gaji &amp; Review Payroll</h1>
+</div>
+<p class="font-body-sm text-body-sm text-slate-500">
+        Periode Penggajian: <span class="font-label-lg text-label-lg text-slate-800">Maret 2025</span> — Status: <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase font-semibold">Tahap Verifikasi Approval HR &amp; Finance</span>
+</p>
+</div>
+<!-- ACTION BUTTON GROUP -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-lg text-label-lg rounded-lg border border-slate-200 shadow-sm transition-all" onclick="document.getElementById('adhocModal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-base text-emerald-600">add_circle</span>
+<span class="">+ Input Adhoc / Bonus</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-lg text-label-lg rounded-lg border border-slate-200 shadow-sm transition-all" onclick="alert('Mengekspor Register Gaji Maret 2025 ke format Excel (.XLSX)...')" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">table_view</span>
+<span class="">Ekspor Register XLSX</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-lg text-label-lg rounded-lg border border-slate-200 shadow-sm transition-all" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">print</span>
+<span class="">Cetak Rekap PDF</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-label-lg text-label-lg rounded-lg shadow-md transition-all font-semibold" onclick="confirmFinalize()" type="button">
+<span class="material-symbols-outlined text-base">lock</span>
+<span class="">Approve &amp; Kunci Periode</span>
+</button>
+</div>
+</div>
+<!-- STEPPER ALUR PAYROLL (AdminLTE / Enterprise LR Stepper) -->
+<div class="w-full bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-slate-500 mb-space-sm font-semibold">Alur Siklus Penggajian (Payroll Lifecycle Pipeline)</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-xs">
+<!-- Step 1: Completed -->
+<div class="flex items-center p-space-sm rounded-lg bg-emerald-50/60 border border-emerald-200/70 transition-all">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-label-md text-label-md mr-space-sm shrink-0 border border-emerald-300">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm text-emerald-800 uppercase font-semibold">Langkah 1</div>
+<div class="font-label-lg text-label-lg text-slate-900 truncate">Buat Periode</div>
+<div class="font-body-sm text-body-sm text-emerald-700 truncate">Selesai (01 Mar)</div>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="flex items-center p-space-sm rounded-lg bg-emerald-50/60 border border-emerald-200/70 transition-all">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-label-md text-label-md mr-space-sm shrink-0 border border-emerald-300">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm text-emerald-800 uppercase font-semibold">Langkah 2</div>
+<div class="font-label-lg text-label-lg text-slate-900 truncate">Hitung Gaji Otomatis</div>
+<div class="font-body-sm text-body-sm text-emerald-700 truncate">Selesai (21 Mar)</div>
+</div>
+</div>
+<!-- Step 3: ACTIVE -->
+<div class="flex items-center p-space-sm rounded-lg bg-emerald-600 text-white shadow-sm transition-all ring-2 ring-emerald-400/40">
+<div class="w-8 h-8 rounded-full bg-white text-emerald-700 font-bold flex items-center justify-center font-label-md text-label-md mr-space-sm shrink-0 shadow-xs">
+          3
+        </div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm text-emerald-100 uppercase font-bold tracking-wider">Tahap Aktif</div>
+<div class="font-label-lg text-label-lg text-white font-semibold truncate">Review &amp; Approval</div>
+<div class="font-body-sm text-body-sm text-emerald-100 truncate">Sedang Diverifikasi</div>
+</div>
+</div>
+<!-- Step 4: Next -->
+<div class="flex items-center p-space-sm rounded-lg bg-slate-50 border border-slate-200 transition-all opacity-80">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-label-md text-label-md mr-space-sm shrink-0">
+          4
+        </div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm text-slate-500 uppercase">Langkah 4</div>
+<div class="font-label-lg text-label-lg text-slate-700 truncate">Final &amp; Lock</div>
+<div class="font-body-sm text-body-sm text-slate-400 truncate">Menunggu Persetujuan</div>
+</div>
+</div>
+<!-- Step 5: Upcoming -->
+<div class="flex items-center p-space-sm rounded-lg bg-slate-50 border border-slate-200 transition-all opacity-80">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-label-md text-label-md mr-space-sm shrink-0">
+          5
+        </div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm text-slate-500 uppercase">Langkah 5</div>
+<div class="font-label-lg text-label-lg text-slate-700 truncate">Generate Payslip</div>
+<div class="font-body-sm text-body-sm text-slate-400 truncate">Disbursement Bank</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUMMARY FINANCIAL CARDS (Section 4.6 KPI Summary) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Gaji Pokok -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-500">Total Gaji Pokok</span>
+<div class="font-headline-md text-headline-md text-slate-900 mt-1 font-bold">Rp 1.450.000.000</div>
+</div>
+<span class="p-2 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 material-symbols-outlined text-xl">payments</span>
+</div>
+<div class="mt-space-sm pt-space-xs text-slate-500 font-body-sm text-body-sm flex items-center justify-between border-t border-slate-100">
+<span class="">Basis 248 Pegawai Aktif</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold">100% Valid</span>
+</div>
+</div>
+<!-- Card 2: Total Tunjangan -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-500">Total Tunjangan (+)</span>
+<div class="font-headline-md text-headline-md text-slate-900 mt-1 font-bold">Rp 485.200.000</div>
+</div>
+<span class="p-2 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 material-symbols-outlined text-xl">trending_up</span>
+</div>
+<div class="mt-space-sm pt-space-xs text-slate-500 font-body-sm text-body-sm truncate border-t border-slate-100" title="Jabatan, Transport, Makan, Lembur">
+        Jabatan, Makan, Transport, Lembur
+      </div>
+</div>
+<!-- Card 3: Total Potongan -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-500">Total Potongan (-)</span>
+<div class="font-headline-md text-headline-md text-error mt-1 font-bold">Rp 92.700.000</div>
+</div>
+<span class="p-2 rounded-lg bg-error-container text-on-error-container material-symbols-outlined text-xl">trending_down</span>
+</div>
+<div class="mt-space-sm pt-space-xs text-slate-500 font-body-sm text-body-sm truncate border-t border-slate-100" title="BPJS Kes, BPJS TK, Pinjaman, Absen">
+        BPJS Kes/TK, Kasbon &amp; Telat
+      </div>
+</div>
+<!-- Card 4: Estimasi PPh 21 -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-500">Estimasi PPh 21</span>
+<div class="font-headline-md text-headline-md text-slate-900 mt-1 font-bold">Rp 58.400.000</div>
+</div>
+<span class="p-2 rounded-lg bg-slate-100 text-slate-600 material-symbols-outlined text-xl">receipt</span>
+</div>
+<div class="mt-space-sm pt-space-xs text-slate-500 font-body-sm text-body-sm flex items-center justify-between border-t border-slate-100">
+<span class="">Metode TER PP 58/2023</span>
+<span class="font-label-sm text-label-sm bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 border border-slate-200 font-medium">SPT Terpadu</span>
+</div>
+</div>
+<!-- Card 5: Net Take Home Pay Highlight (Deep slate background with emerald green accent) -->
+<div class="bg-slate-900 text-white rounded-xl p-space-md shadow-md flex flex-col justify-between border border-slate-800 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-emerald-400 font-semibold">Net Take Home Pay</span>
+<div class="font-headline-md text-headline-md text-emerald-300 mt-1 font-bold tracking-tight">Rp 1.784.100.000</div>
+</div>
+<span class="p-2 rounded-lg bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div class="mt-space-sm pt-space-xs font-body-sm text-body-sm text-slate-300 flex items-center justify-between border-t border-slate-800 relative z-10">
+<span class="">Total Siap Transfer Bank</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">Disetujui</span>
+</div>
+</div>
+</div>
+<!-- PAYROLL ANALYTICS MINI WIDGETS -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Mini Widget 1: Status Approval Hierarchy -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-slate-900">Matriks Approval Payroll</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200">Level 2 dari 3</span>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-emerald-600">check_circle</span>
+<span class="text-slate-800 font-semibold">1. HR Operations Lead (Dewi K.)</span>
+</div>
+<span class="font-label-sm text-label-sm text-slate-500">Approved (21 Mar, 14:10)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-emerald-600">pending</span>
+<span class="text-slate-800 font-semibold">2. Finance &amp; Tax Controller (Bambang S.)</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">Sedang Meninjau</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-slate-400">radio_button_unchecked</span>
+<span class="text-slate-500 font-semibold">3. Chief Executive Officer (Hartanto P.)</span>
+</div>
+<span class="font-label-sm text-label-sm text-slate-400">Menunggu L2</span>
+</div>
+</div>
+</div>
+<!-- Mini Widget 2: Visual Proporsi Beban Payroll -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-slate-900">Komposisi Beban Gaji</h3>
+<span class="font-label-sm text-label-sm text-slate-500">Rasio Net/Gross: 92.2%</span>
+</div>
+<!-- Inline Horizontal Distribution -->
+<div class="space-y-2">
+<div class="w-full h-4 rounded-full bg-slate-100 flex overflow-hidden border border-slate-200/60">
+<div class="bg-emerald-600 h-full" style="width: 75%;" title="Gaji Pokok: 75%"></div>
+<div class="bg-emerald-400 h-full" style="width: 17%;" title="Tunjangan &amp; Lembur: 17%"></div>
+<div class="bg-error h-full" style="width: 5%;" title="Potongan: 5%"></div>
+<div class="bg-slate-500 h-full" style="width: 3%;" title="PPh 21: 3%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-slate-500 pt-1">
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span><span class="">Pokok 75%</span></div>
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span class="">Tunj. 17%</span></div>
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-error"></span><span class="">Pot. 5%</span></div>
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span><span class="">Pajak 3%</span></div>
+</div>
+</div>
+<div class="text-body-sm font-body-sm text-slate-500 mt-2">
+        Seluruh perhitungan komponen telah memenuhi regulasi UMR Jakarta 2025 dan tarif TER PPh 21 terbaru.
+      </div>
+</div>
+<!-- Mini Widget 3: Validasi Rekonsiliasi Kehadiran -->
+<div class="bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-slate-900">Rekonsiliasi Absensi &amp; Lembur</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">Sinkron Biometrik</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-slate-50 border border-slate-200">
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Total Jam Lembur</span>
+<div class="font-headline-sm text-headline-sm text-slate-900 font-bold mt-0.5">384 Jam</div>
+<span class="font-body-sm text-body-sm text-slate-500">42 Karyawan lembur</span>
+</div>
+<div class="p-space-sm rounded-lg bg-slate-50 border border-slate-200">
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Potongan Terlambat</span>
+<div class="font-headline-sm text-headline-sm text-error font-bold mt-0.5">Rp 8.450.000</div>
+<span class="font-body-sm text-body-sm text-slate-500">19 Kejadian keterlambatan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TABLE SECTION & FILTER BAR (Clean Dense Enterprise Table) -->
+<div class="w-full bg-white border border-slate-200/90 rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Toolbar Filters -->
+<div class="p-space-md bg-slate-50/70 border-b border-slate-200 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Search Input -->
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 shadow-xs" id="employeeSearch" placeholder="Cari NIK, Nama Karyawan..." type="text">
+</div>
+<!-- Filter Departemen -->
+<select class="px-3 py-2 bg-white border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-800 shadow-xs focus:outline-none focus:border-emerald-500">
+<option value="">Semua Departemen</option>
+<option value="IT">IT &amp; Software Engineering</option>
+<option value="HR">Human Resources</option>
+<option value="FIN">Finance &amp; Accounting</option>
+<option value="OPS">Operations &amp; Logistik</option>
+<option value="MKT">Marketing &amp; Sales</option>
+</select>
+<!-- Filter Status Verifikasi -->
+<select class="px-3 py-2 bg-white border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-800 shadow-xs focus:outline-none focus:border-emerald-500">
+<option value="">Semua Status Verifikasi</option>
+<option value="verified">Verified (Siap Bayar)</option>
+<option value="review">Perlu Review Manual</option>
+<option value="adjusted">Ada Adhoc Penyesuaian</option>
+</select>
+</div>
+<!-- Action Utilities -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors shadow-xs" title="Reload Data" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+<button class="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors shadow-xs" title="Kustomisasi Kolom" type="button">
+<span class="material-symbols-outlined text-base">view_column</span>
+</button>
+<span class="text-body-sm font-body-sm text-slate-500 ml-1">Menampilkan <strong>8</strong> dari <strong>248</strong> Data</span>
+</div>
+</div>
+<!-- Scrollable Dense Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-100/80 border-b border-slate-200 font-label-md text-label-md text-slate-600 uppercase tracking-wider">
+<th class="py-3 px-4">NIK</th>
+<th class="py-3 px-4">Nama Karyawan</th>
+<th class="py-3 px-4">Departemen</th>
+<th class="py-3 px-4 text-right">Gaji Pokok</th>
+<th class="py-3 px-4 text-right">Total Allowance (+)</th>
+<th class="py-3 px-4 text-right">Total Potongan (-)</th>
+<th class="py-3 px-4 text-right">PPh 21</th>
+<th class="py-3 px-4 text-right font-bold text-slate-900">Net Take Home Pay</th>
+<th class="py-3 px-4 text-center">Status</th>
+<th class="py-3 px-4 text-center">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 font-body-sm text-body-sm text-slate-800">
+<!-- Row 1: Dewi Anggraini (Matches Modal Payslip Target) -->
+<tr class="hover:bg-slate-50 transition-colors bg-white">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-012</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Corporate headshot portrait of an Indonesian professional woman Dewi Anggraini wearing navy blue blazer smiling confidently in modern Jakarta office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRHOVGdV_lWviwqDnTjnzIYOixpYzsZTZdUdIjDlfPwJWw320nj6OOus9DF1Y-2F0GG-ZsvvsJK751jLoY06OPpXj7FvfSYQKQmqVF85DrG7IuMwNg-WPBHPStzAhS01GtWJhSytgyLNByLDmINLr_MMgd4R2aRwZeuTVeENpVv1LqfUpPhQhJtjBMR37lPT7jXI_H5NRicSiRWMYwUv9tLYFvbA46lweoqwM5Ikg4VwxQrAe_WmBVg">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Dewi Anggraini</div>
+<div class="text-slate-500 text-body-sm">Senior HR Specialist</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">HR Operations</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 12.500.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 4.750.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 680.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 510.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 16.060.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+                Verified
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Buka Form Edit Komponen Penggajian: Dewi Anggraini')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Budi Prasetyo -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-003</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Portrait of Indonesian male lead engineer Budi Prasetyo wearing modern glasses and casual corporate shirt in office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAcW1rO-2QcRTXmOu8llh1aamSRuB1iNb1i06S4_94uMIAJh_dvs6uajpAQcCG5YKDOf-Bc1V0vN_bwym1uBPMoFUpXk5I0nbY_RXJZbdP6Dp0xMlzo-8owz8rc1qIDxULSr9_SUB4TWiudsJtWbEdHKtMJoFtzCGFt6HjCGmvv_qTOFL0IeoQlqlUFIFaxbrex24Hzj1OjxLD8uMo5WvvDMzhCKmCsHCU1wdMgiaOczRJKtldsgdrwA">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Budi Prasetyo</div>
+<div class="text-slate-500 text-body-sm">Principal Architect</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">Software Eng.</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 24.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 6.200.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 1.150.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 1.850.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 27.200.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+                Verified
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Edit Komponen Budi Prasetyo')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Siti Rahmawati -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-045</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Portrait of Indonesian female accountant Siti Rahmawati working on audit registers in corporate finance department" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOrEg_2IxOvJ4Nks-DW03v-wR3lTYZEurRR74VboMRf5nB_RFvBQ8dcrkZOChyjMb-s8lE9rFXziSaY7DmK1Hpdhn7AxtMKy5KEHVPymb3FEw64YeC-Ye7_w-gcSLpO1l4lyQpHIsgrRildB3CN-27KFc0-aoymggNJyvK8fjHRsUxmn6cdk00hcAgGLGgAhhkT7LZGib16Gr0nfjjJ9QILkGDW2Y5eyJ00CedSF-iiKVy7KltzrNcDQ">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Siti Rahmawati</div>
+<div class="text-slate-500 text-body-sm">Senior Tax Analyst</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">Finance &amp; Tax</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 11.200.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 3.100.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 580.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 420.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 13.300.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+                Verified
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Edit Komponen Siti Rahmawati')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ahmad Fauzi (With Adhoc Adjustment) -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-088</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Portrait of Indonesian male logistics manager Ahmad Fauzi wearing company uniform in modern warehouse office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQXQ8JwMjZ1Ah6TAcE-D0pmiGdUZxYFmOoFTiUclRHj2l-55kQfmy9XrozKGOLkVLqEz206YxNvathPaq-WQ1TSEea_3Y7JwTzLDI4c1Yt_zNL9nnDX2jTFrF76VluVJzMRzcYZTep96xP6fzlcqKKTMBkPkS9ms4Yo24VOUDqjpCWxYJBYd0q11MoFf3n76oou9SSyN__cELia0tyHkwaaHcZcD4HcWe2Bab7s8SyXMOfyuEeW4uKOw">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Ahmad Fauzi</div>
+<div class="text-slate-500 text-body-sm">Logistics Supervisor</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">Operations</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 8.750.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 4.250.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 450.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 280.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 12.270.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-amber-50 text-amber-700 border border-amber-200 font-medium">
+                Ada Adhoc
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Edit Komponen Ahmad Fauzi')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Kevin Sanjaya -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-104</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Portrait of Indonesian young male creative designer Kevin Sanjaya in sleek studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0TunktK7O_iCS7G3aPPVep6oPRgboUVPPQvPl3xc8TwFxHaZtQUIxP2t0jpJd1IwZak-20KTk8M_Qh6EJHxxHW5vvwZPOUr3QsPlqPHcOA0pFpQffsTT3OP4c0ToPF66RyGmJgMKplSg-pfOJ5Vvy3s1yH4zHmQV62poc8QkIVijwFf1qaEYnTiWNfve0nVxlBf7oloF0gbLvcB3jSboe_rhRKrMn0xZDq1URIEzc1irqanETHOqv4g">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Kevin Sanjaya</div>
+<div class="text-slate-500 text-body-sm">UI/UX Designer Lead</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">Software Eng.</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 15.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 3.500.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 720.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 710.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 17.070.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+                Verified
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Edit Komponen Kevin Sanjaya')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Rina Wijaya (Needs Review) -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3 px-4 font-mono font-semibold text-emerald-700">EMP-133</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover shrink-0 ring-1 ring-slate-200" data-alt="Portrait of Indonesian female account executive Rina Wijaya in bright professional marketing conference room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-57ubfKJj3NK3_5jKIebuZsSC8lYHys15gTwXwu4EGHQASFQJILkyRrkJcbfqCDEHQkE2BVOhO83x-q04Wd0OHACzhmsI_NiYk9a_fuDS_ml-lzJ6L1ozWNVfOrS041vNaD8E2TZsTiouOgcjsjeRPClN2Sfv8QBLtBgVHaIJNiNJHes0fhw_vNzxOABBLbEGPdpkX2B3qwUTswLLWGzJUtTG2XL3w5_9hwZJzkqHZ4xP73gpYiwg-w">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-slate-900">Rina Wijaya</div>
+<div class="text-slate-500 text-body-sm">Enterprise Account Exec</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-slate-100 text-slate-700 border border-slate-200 font-medium">Sales &amp; Mkt</span>
+</td>
+<td class="py-3 px-4 text-right font-mono">Rp 9.500.000</td>
+<td class="py-3 px-4 text-right font-mono text-emerald-700 font-medium">+Rp 5.800.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-medium">-Rp 490.000</td>
+<td class="py-3 px-4 text-right font-mono text-slate-500">Rp 390.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-emerald-800 bg-emerald-50/60 px-3">
+              Rp 14.420.000
+            </td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-slate-100 text-slate-600 border border-slate-200 font-medium">
+                Perlu Review
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors border border-emerald-200/60" onclick="openPayslipModal()" title="Pratinjau Slip Gaji" type="button">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors border border-slate-200" onclick="alert('Edit Komponen Rina Wijaya')" title="Edit Komponen" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer (AdminLTE / DataTables Style) -->
+<div class="p-space-md bg-slate-50/70 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm text-slate-500">
+<span class="">Menampilkan</span>
+<select class="px-2 py-1 bg-white rounded border border-slate-200 text-slate-800 font-semibold text-body-sm shadow-xs">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+<span class="">entri per halaman (Total 248 Karyawan)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded bg-white border border-slate-200 text-slate-500 hover:bg-slate-100 text-label-sm font-label-sm disabled:opacity-50" disabled="" type="button">Sebelumnya</button>
+<button class="w-8 h-8 rounded bg-emerald-600 text-white font-bold text-label-sm font-label-sm" type="button">1</button>
+<button class="w-8 h-8 rounded bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-label-sm font-label-sm" type="button">2</button>
+<button class="w-8 h-8 rounded bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-label-sm font-label-sm" type="button">3</button>
+<span class="px-1 text-slate-400">...</span>
+<button class="w-8 h-8 rounded bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-label-sm font-label-sm" type="button">25</button>
+<button class="px-3 py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 text-label-sm font-label-sm" type="button">Berikutnya</button>
+</div>
+</div>
+</div>
+<!-- AUDIT TRAIL LOG SUMMARY -->
+<div class="w-full bg-white border border-slate-200/90 rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-xl">history</span>
+<span class="font-headline-sm text-headline-sm text-slate-900">Catatan Riwayat Audit Register (Audit Trail)</span>
+</div>
+<button class="font-label-sm text-label-sm text-emerald-700 font-semibold hover:underline" onclick="alert('Mengunduh Log Audit ISO 27001 Payroll')" type="button">
+        Unduh Log Lengkap (.CSV)
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-body-sm font-body-sm">
+<div class="p-space-sm rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-lg mt-0.5">done_all</span>
+<div>
+<div class="font-label-md text-label-md text-slate-900 font-semibold">Validasi Pajak PPh 21 TER 2024/2025</div>
+<div class="text-slate-500 text-body-sm">Berhasil dikalkulasi otomatis sesuai PTKP dan formula progresif.</div>
+<div class="text-slate-400 text-label-sm font-label-sm mt-1">21 Mar 2025 • 09:30:15 WIB</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-lg mt-0.5">sync_alt</span>
+<div>
+<div class="font-label-md text-label-md text-slate-900 font-semibold">Integrasi Klaim &amp; Reimbursement</div>
+<div class="text-slate-500 text-body-sm">18 klaim operasional senilai Rp 14.800.000 masuk ke komponen tunjangan.</div>
+<div class="text-slate-400 text-label-sm font-label-sm mt-1">21 Mar 2025 • 08:15:02 WIB</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-lg mt-0.5">fingerprint</span>
+<div>
+<div class="font-label-md text-label-md text-slate-900 font-semibold">Kunci Rekap Kehadiran (Final Cut-off)</div>
+<div class="text-slate-500 text-body-sm">Oleh Dewi Kartika. Seluruh revisi jam lembur ditutup resmi.</div>
+<div class="text-slate-400 text-label-sm font-label-sm mt-1">20 Mar 2025 • 23:59:00 WIB</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 1: PREVIEW SLIP GAJI (PAYSLIP POPUP MODAL)                         -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" id="payslipModal">
+<div class="relative w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden my-8 border border-slate-200">
+<!-- Modal Header (Corporate Brand & Actions) -->
+<div class="bg-emerald-700 text-white p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-emerald-800 text-white border border-emerald-600/50">
+<span class="material-symbols-outlined text-2xl">receipt_long</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-white">Pratinjau Slip Gaji (Payslip)</h2>
+<div class="font-body-sm text-body-sm text-emerald-100">Dokumen Resmi PT Nexa Solusi Digital • Bersifat Rahasia (Confidential)</div>
+</div>
+</div>
+<button class="w-9 h-9 rounded-lg bg-emerald-800/80 hover:bg-emerald-900 text-white transition-colors flex items-center justify-center" onclick="closePayslipModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body (Official Slip Paper) -->
+<div class="p-space-md sm:p-space-lg space-y-space-md bg-slate-50">
+<!-- Company & Employee Meta Header -->
+<div class="bg-white p-space-md rounded-xl shadow-xs border border-slate-200 space-y-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs border-b border-slate-100">
+<div>
+<span class="font-label-md text-label-md text-slate-500 uppercase tracking-widest">PERUSAHAAN</span>
+<div class="font-headline-sm text-headline-sm font-bold text-emerald-800">PT NEXA SOLUSI DIGITAL TBK</div>
+<div class="font-body-sm text-body-sm text-slate-500">Cyber 2 Tower Lt. 28, HR Rasuna Said, Jakarta Selatan 12950</div>
+</div>
+<div class="sm:text-right mt-2 sm:mt-0">
+<span class="font-label-md text-label-md text-slate-500 uppercase tracking-widest">NOMOR DOKUMEN</span>
+<div class="font-label-lg text-label-lg font-mono font-bold text-slate-900">PS-2025-03-0142</div>
+<div class="font-body-sm text-body-sm text-emerald-700 font-semibold">Periode: Maret 2025</div>
+</div>
+</div>
+<!-- Employee Identity Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs text-body-sm font-body-sm">
+<div>
+<div class="text-slate-500 font-label-sm text-label-sm uppercase">NIK Karyawan</div>
+<div class="font-mono font-bold text-slate-900">EMP-012</div>
+</div>
+<div>
+<div class="text-slate-500 font-label-sm text-label-sm uppercase">Nama Karyawan</div>
+<div class="font-bold text-slate-900">Dewi Anggraini</div>
+</div>
+<div>
+<div class="text-slate-500 font-label-sm text-label-sm uppercase">Jabatan</div>
+<div class="text-slate-900">Sr. HR Specialist</div>
+</div>
+<div>
+<div class="text-slate-500 font-label-sm text-label-sm uppercase">Departemen / PTKP</div>
+<div class="text-slate-900">HR Ops / TK-0</div>
+</div>
+</div>
+</div>
+<!-- Breakdown Grid (2 Columns: Penerimaan vs Potongan) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Column A: Penerimaan (Earnings) -->
+<div class="bg-white p-space-md rounded-xl shadow-xs border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm border-b border-slate-100">
+<span class="font-label-lg text-label-lg font-bold text-emerald-700 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">add_circle</span>
+                  A. PENERIMAAN (EARNINGS)
+                </span>
+<span class="font-label-sm text-label-sm uppercase text-slate-500">Nominal (IDR)</span>
+</div>
+<div class="space-y-space-xs text-body-sm font-body-sm">
+<div class="flex items-center justify-between py-1">
+<span class="text-slate-800">Gaji Pokok (Basic Salary)</span>
+<span class="font-mono font-semibold text-slate-900">12.500.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-slate-800">Tunjangan Jabatan</span>
+<span class="font-mono font-semibold text-slate-900">2.000.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-slate-800">Tunjangan Makan &amp; Transport</span>
+<span class="font-mono font-semibold text-slate-900">1.750.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="text-slate-800">Upah Lembur Resmi</span>
+<span class="text-slate-500 font-label-sm text-label-sm">Akumulasi 6 Jam Kerja</span>
+</div>
+<span class="font-mono font-semibold text-slate-900">1.000.000</span>
+</div>
+</div>
+</div>
+<!-- Total Earnings Subtotal -->
+<div class="pt-space-sm mt-space-sm border-t border-slate-200 flex items-center justify-between font-label-lg text-label-lg">
+<span class="text-emerald-700 font-bold">Total Penghasilan Bruto</span>
+<span class="font-mono font-bold text-emerald-700">Rp 17.250.000</span>
+</div>
+</div>
+<!-- Column B: Potongan (Deductions) -->
+<div class="bg-white p-space-md rounded-xl shadow-xs border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm border-b border-slate-100">
+<span class="font-label-lg text-label-lg font-bold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-base">remove_circle</span>
+                  B. POTONGAN (DEDUCTIONS)
+                </span>
+<span class="font-label-sm text-label-sm uppercase text-slate-500">Nominal (IDR)</span>
+</div>
+<div class="space-y-space-xs text-body-sm font-body-sm">
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="text-slate-800">BPJS Ketenagakerjaan (3%)</span>
+<span class="text-slate-500 font-label-sm text-label-sm">JHT 2% + JP 1%</span>
+</div>
+<span class="font-mono font-semibold text-error">375.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="text-slate-800">BPJS Kesehatan (1%)</span>
+<span class="text-slate-500 font-label-sm text-label-sm">Batas Maksimal Cap</span>
+</div>
+<span class="font-mono font-semibold text-error">120.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="text-slate-800">Pajak Penghasilan (PPh 21)</span>
+<span class="text-slate-500 font-label-sm text-label-sm">Tarif Efektif Rata-rata</span>
+</div>
+<span class="font-mono font-semibold text-error">510.000</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="text-slate-800">Potongan Keterlambatan</span>
+<span class="text-slate-500 font-label-sm text-label-sm">2 kali terlambat (&gt;15 mnt)</span>
+</div>
+<span class="font-mono font-semibold text-error">185.000</span>
+</div>
+</div>
+</div>
+<!-- Total Deductions Subtotal -->
+<div class="pt-space-sm mt-space-sm border-t border-slate-200 flex items-center justify-between font-label-lg text-label-lg">
+<span class="text-error font-bold">Total Pemotongan</span>
+<span class="font-mono font-bold text-error">Rp 1.190.000</span>
+</div>
+</div>
+</div>
+<!-- Highlight Box: NET TAKE HOME PAY & TERBILANG -->
+<div class="bg-emerald-50/80 border border-emerald-200 rounded-xl p-space-md shadow-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-emerald-800 font-bold">TOTAL GAJI BERSIH (TAKE HOME PAY)</span>
+<div class="font-display-lg text-display-lg font-bold text-emerald-700 font-mono mt-0.5">
+                Rp 16.060.000
+              </div>
+</div>
+<div class="sm:text-right">
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Status Transfer Bank</span>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-label-sm text-label-sm bg-white text-slate-800 mt-1 shadow-xs border border-emerald-200 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="">BCA Rek: •••• 9201</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-emerald-200/70 flex items-center gap-space-xs text-body-sm font-body-sm text-slate-800">
+<span class="font-label-sm text-label-sm uppercase text-slate-600 font-bold shrink-0">Terbilang:</span>
+<span class="italic font-medium text-slate-600">"Enam Belas Juta Enam Puluh Ribu Rupiah"</span>
+</div>
+</div>
+<!-- Digital Signature & QR Verification Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-sm bg-white rounded-xl border border-slate-200 text-slate-500 text-body-sm font-body-sm gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center text-emerald-700 font-mono text-xs font-bold text-center leading-none">
+              NEXA<br>QR-OK
+            </div>
+<div>
+<div class="font-label-sm text-label-sm text-slate-900 font-semibold">Dokumen ini sah secara elektronik (E-Sign ISO 27001).</div>
+<div class="text-label-sm font-label-sm text-slate-500">Ditandatangani oleh NexaHCMS Payroll Engine pada 21/03/2025 09:42:01 WIB.</div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-slate-400">
+            Ref: HASH-SHA256: 8a4c8e7...3f2b
+          </div>
+</div>
+</div>
+<!-- Modal Footer Action Buttons -->
+<div class="bg-white p-space-md flex flex-wrap items-center justify-between gap-space-sm border-t border-slate-200">
+<button class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-lg text-label-lg rounded-lg transition-colors border border-slate-200" onclick="closePayslipModal()" type="button">
+          Tutup
+        </button>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-label-lg text-label-lg rounded-lg transition-colors border border-emerald-200 font-medium" onclick="alert('Mengirim salinan slip gaji terenkripsi ke email dewi.anggraini@nexa.co.id...')" type="button">
+<span class="material-symbols-outlined text-base">send</span>
+<span class="">Kirim Email Langsung ke Karyawan</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-label-lg text-label-lg rounded-lg shadow-sm transition-colors font-semibold" onclick="alert('Mengunduh PDF Slip Gaji Resmi dengan proteksi sandi (format tanggal lahir)...')" type="button">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span class="">Unduh PDF (Password Protected)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: INPUT ADHOC / BONUS COMPONENT                                   -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" id="adhocModal">
+<div class="relative w-full max-w-xl bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+<!-- Modal Header -->
+<div class="bg-slate-50 p-space-md flex items-center justify-between border-b border-slate-200">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-xl">post_add</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-slate-900">Input Komponen Adhoc / Bonus Penggajian</h3>
+</div>
+<button class="p-1 rounded text-slate-400 hover:text-slate-600" onclick="document.getElementById('adhocModal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Form Body -->
+<form class="p-space-md space-y-space-md" onsubmit="handleAdhocSubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-slate-500 mb-1">Pilih Karyawan</label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-900 focus:outline-none focus:border-emerald-500" required="">
+<option value="">-- Pilih Nama atau NIK Karyawan --</option>
+<option value="EMP-012">EMP-012 - Dewi Anggraini (HR Operations)</option>
+<option value="EMP-003">EMP-003 - Budi Prasetyo (Software Eng.)</option>
+<option value="EMP-045">EMP-045 - Siti Rahmawati (Finance &amp; Tax)</option>
+<option value="EMP-088">EMP-088 - Ahmad Fauzi (Operations)</option>
+<option value="EMP-104">EMP-104 - Kevin Sanjaya (Software Eng.)</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-slate-500 mb-1">Tipe Komponen</label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-900 focus:outline-none focus:border-emerald-500" required="">
+<option value="BONUS">Bonus / Insentif (+)</option>
+<option value="THR">Tunjangan Hari Raya (+)</option>
+<option value="ADJUSTMENT_ADD">Penyesuaian Lebih Bayar (+)</option>
+<option value="DEDUCT_PENALTY">Potongan Denda / Disiplin (-)</option>
+<option value="DEDUCT_KASBON">Cicilan Pinjaman Tambahan (-)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-slate-500 mb-1">Nominal (Rupiah)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-mono text-xs">Rp</span>
+<input class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-mono text-body-sm text-slate-900 focus:outline-none focus:border-emerald-500" placeholder="0" required="" type="number">
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-slate-500 mb-1">Keterangan / Alasan Adhoc</label>
+<textarea class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg font-body-sm text-body-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500" placeholder="Tuliskan keterangan memo, no. SK direksi, atau dasar perhitungan tambahan gaji..." required="" rows="3"></textarea>
+</div>
+<div class="p-space-sm rounded-lg bg-emerald-50/70 border border-emerald-200 flex items-center gap-space-xs text-body-sm font-body-sm text-emerald-800">
+<span class="material-symbols-outlined text-base text-emerald-600">info</span>
+<span class="">Komponen adhoc yang diinput saat masa Review akan langsung otomatis menghitung ulang Pajak PPh 21 TER dan Net Take Home Pay.</span>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-end gap-space-xs pt-space-xs border-t border-slate-200">
+<button class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-label-lg text-label-lg transition-colors border border-slate-200" onclick="document.getElementById('adhocModal').classList.add('hidden')" type="button">
+            Batal
+          </button>
+<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-label-lg text-label-lg shadow-sm transition-colors font-semibold" type="submit">
+            Simpan Komponen Adhoc
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- JAVASCRIPT LOGIC FOR MODALS & ACTIONS -->
+<script>
+  function openPayslipModal() {
+    const modal = document.getElementById('payslipModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closePayslipModal() {
+    const modal = document.getElementById('payslipModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function handleAdhocSubmit(event) {
+    event.preventDefault();
+    alert('Komponen adhoc berhasil disimpan ke register gaji karyawan! Kalkulasi PPh 21 dan Net Pay telah diperbarui secara real-time.');
+    document.getElementById('adhocModal').classList.add('hidden');
+  }
+
+  function confirmFinalize() {
+    const confirmed = confirm("Apakah Anda yakin ingin Mengunci & Menyetujui (Finalize) Register Gaji Periode Maret 2025?\n\nSetelah dikunci, komponen gaji tidak dapat diubah tanpa pembatalan otorisasi level CFO.");
+    if (confirmed) {
+      alert("Periode Penggajian Maret 2025 Berhasil Dikunci (Locked). File siap diteruskan ke Bank Payroll Disbursement dan Distribusi Slip Gaji Otomatis.");
+    }
+  }
+
+  // Quick Employee Search Filter in Dense Table
+  document.getElementById('employeeSearch')?.addEventListener('input', function(e) {
+    const filter = e.target.value.toLowerCase();
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+
+  // ESC Key handler to close modals
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closePayslipModal();
+      document.getElementById('adhocModal')?.classList.add('hidden');
+    }
+  });
+</script></main><footer class="w-full bg-white border-t border-slate-200 py-space-md px-margin shadow-[0_1px_3px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center justify-between gap-space-xs text-slate-500 font-body-sm text-body-sm"><div class="">© 2025 NexaHCMS Enterprise Suite. Version 2.4.0-LTS.</div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="">Status: Connected (Production DB)</span></div></footer></div>
+
+</body></html>

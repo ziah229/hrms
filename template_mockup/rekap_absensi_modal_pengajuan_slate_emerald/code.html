@@ -1,0 +1,790 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        slate: {
+          850: '#172033',
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+          600: '#475569',
+          500: '#64748b',
+          400: '#94a3b8',
+          300: '#cbd5e1',
+          200: '#e2e8f0',
+          100: '#f1f5f9',
+          50: '#f8fafc'
+        },
+        emerald: {
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif']
+      }
+    }
+  }
+};</script></head><body class="bg-slate-50 font-sans text-slate-800 antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-slate-900 text-slate-200 z-50 flex flex-col border-r border-slate-800 shadow-lg overflow-y-auto"><div class="h-16 flex items-center gap-2.5 px-4 bg-slate-950/60 border-b border-slate-800"><a href="#" class="flex items-center"><img src="https://lh3.googleusercontent.com/aida/AEtjO1UWKvZcnYaFIwMHB17QCqrT8jMjRi7paBT-hvHBcKHHqK6JxZ_EU6FFe9Cuf5SFUIT8-7mqzdFVQnFR-wjGWrlN2tbWIL9kxYz_Av8lncMxxfulpVtnx7poeOfwWkZ3xNfVJu2Qe6hlUkD246h8pn_3dXr9KTHc65voWjsdT3mIygx3-Wk5yRY_4e8-IkrBaXMf6jfuPZWVnuZb6oBIL8kkkJ4fIRiZpAQyv4kbtVjNkeDxOLPkRukyq65r" alt="NexaHCMS Enterprise Suite" class="h-10 w-auto object-contain"></a></div><div class="p-3 mx-3 mt-3 rounded-xl bg-slate-800/80 border border-slate-700/50 flex items-center gap-3"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-emerald-500/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-slate-900"></span></div><div class="flex flex-col overflow-hidden"><span class="text-xs font-semibold text-white truncate">Dewi Kartika</span><span class="text-[11px] text-slate-400 truncate">HR Operations Lead</span></div></div><nav class="flex-1 px-3 py-4 space-y-1"><div class="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">UTAMA</div><a class="flex items-center justify-between px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">dashboard</span><span class="text-xs font-medium">Dashboard</span></div><span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-700/50 text-emerald-400 font-semibold">Live</span></a><div class="px-2 pt-4 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">KEPEGAWAIAN</div><div class="space-y-0.5"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="data-karyawan" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">group</span><span class="text-xs font-medium">Data Karyawan</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="daftar-karyawan" href="#">Daftar Karyawan</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="tambah-karyawan" href="#">Tambah Karyawan</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="master-departemen" href="#">Master Departemen</a></div></div><div class="space-y-0.5 pt-1"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-emerald-400 bg-slate-800/90 font-medium" data-path="absensi-karyawan" href="#"><span class="material-symbols-outlined text-[19px] text-emerald-400">event_available</span><span class="text-xs">Absensi Karyawan</span></a><div class="pl-8 pr-2 space-y-1"><a aria-current="page" class="block py-1 text-xs font-semibold text-emerald-400 bg-emerald-900/30 rounded px-2 -ml-2 border-l-2 border-emerald-500" data-path="rekap-harian" href="#">Rekap Harian</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="cuti-izin" href="#">Cuti &amp; Izin</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="lembur" href="#">Lembur</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="jadwal-shift" href="#">Jadwal / Shift</a></div></div><div class="px-2 pt-4 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">KOMPENSASI &amp; BENEFIT</div><div class="space-y-0.5"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="data-gaji" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">account_balance_wallet</span><span class="text-xs font-medium">Data Gaji</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="gaji-pokok" href="#">Gaji Pokok</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="riwayat-perubahan" href="#">Riwayat Perubahan</a></div></div><div class="space-y-0.5 pt-1"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="allowances-deductions" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">sell</span><span class="text-xs font-medium">Allowances &amp; Deductions</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="master-komponen" href="#">Master Komponen</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="komponen-karyawan" href="#">Komponen Karyawan</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="sekali-bayar" href="#">Sekali Bayar</a></div></div><div class="space-y-0.5 pt-1"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="register-gaji" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">receipt_long</span><span class="text-xs font-medium">Register Gaji</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="periode-gaji" href="#">Periode Gaji</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="review-approval" href="#">Review &amp; Approval</a></div></div><div class="space-y-0.5 pt-1"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="payslip" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">payments</span><span class="text-xs font-medium">Payslip</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="daftar-payslip" href="#">Daftar Payslip</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="kirim-email" href="#">Kirim Email</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="payslip-saya" href="#">Payslip Saya</a></div></div><div class="px-2 pt-4 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">LAPORAN &amp; SISTEM</div><div class="space-y-0.5"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="laporan-export" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">bar_chart</span><span class="text-xs font-medium">Laporan &amp; Export</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="export-xlsx-pdf" href="#">Export XLSX/PDF</a></div></div><div class="space-y-0.5 pt-1 mb-4"><a class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group" data-path="pengaturan-role" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-emerald-400 transition-colors">settings</span><span class="text-xs font-medium">Pengaturan &amp; Role</span></a><div class="pl-8 pr-2 space-y-1"><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="user-role-rbac" href="#">User &amp; Role RBAC</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="hari-libur" href="#">Hari Libur</a><a class="block py-1 text-slate-400 hover:text-slate-200 text-xs transition-colors" data-path="audit-log" href="#">Audit Log</a></div></div></nav></aside><div class="pl-64 flex flex-col min-h-screen bg-slate-50"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur-md z-40 flex items-center justify-between px-6 border-b border-slate-200 shadow-sm"><div class="flex items-center gap-4 flex-1 max-w-xl"><button class="p-1.5 text-slate-500 hover:text-slate-800 transition-colors rounded-lg hover:bg-slate-100" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-2 text-xs text-slate-500"><span class="hover:text-slate-800 cursor-pointer">Home</span><span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span><span class="font-semibold text-slate-800">Dashboard</span></div><div class="relative flex-1 hidden sm:block ml-2"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-slate-100/90 rounded-lg text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-emerald-500 border border-transparent focus:border-emerald-500 transition-all" placeholder="Cari menu atau karyawan..." type="search"></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-1.5"><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Notifikasi Kehadiran" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full">3</span></button><button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-all" title="Permintaan Approval Cuti" type="button"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="absolute top-1 right-1 w-4 h-4 bg-emerald-600 text-white text-[10px] font-bold flex items-center justify-center rounded-full">5</span></button></div><span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 border border-slate-200 text-slate-600 font-bold">ID</span><span class="hidden lg:inline-flex px-3 py-1 rounded-full text-xs bg-emerald-50 text-emerald-800 border border-emerald-200 font-medium">HR Admin - All Access</span><div class="flex items-center gap-1.5 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpg1DEPYkN-CBhgZGocc2vekp63-gMiu5koYWXR2cE6fWnDMHlsAhGS1q0bCAbJq_FP84-_7vXvnVf80etrJl63KIgvM2lWm0ysmSzXZK3AkCXQ6h4BQihanSOUUYIVu1Npca2M9yGbHXIjpIrB5W4Y-ydds8J-Dz-9VLe-K-otqQqdYQJ6tDCFy6Ybj65vFP115eWDh-0lhzMZIqiyDzatJUf1n_GFLYOZFHIeNhCr3EjI-OIjIUuA"><span class="material-symbols-outlined text-slate-400 text-sm">arrow_drop_down</span></div></div></header><main class="flex-1 pt-20 w-full px-6 pb-8"><div class="flex flex-col w-full max-w-7xl mx-auto">
+<!-- Top Command Header & Filter Bar -->
+<section class="mb-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1">
+<span class="">Manajemen Kehadiran</span>
+<span class="">•</span>
+<span class="text-emerald-700">Enterprise Shift Engine</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight">
+        Rekap Absensi &amp; Pengajuan Cuti/Lembur
+      </h1>
+<p class="text-xs text-slate-500 mt-1">
+        Audit real-time ketepatan waktu, integrasi biometrik, serta approval hierarki korporasi.
+      </p>
+</div>
+<!-- Actions & Quick Buttons -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 text-white text-xs font-semibold shadow-sm hover:bg-emerald-700 transition-colors" id="openCutiModalBtn" type="button">
+<span class="material-symbols-outlined text-base">event_note</span>
+<span class="">+ Ajukan Cuti/Izin</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100 transition-colors" id="openLemburModalBtn" type="button">
+<span class="material-symbols-outlined text-base text-emerald-600">more_time</span>
+<span class="">+ Form Lembur</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-medium hover:bg-slate-100 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">fingerprint</span>
+<span class="hidden sm:inline">Import Log</span> Fingerprint
+      </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-medium hover:bg-slate-100 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-base text-slate-500">download</span>
+<span class="">Export XLSX</span>
+</button>
+</div>
+</section>
+<!-- Filter Strip -->
+<section class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm mb-6">
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end" onsubmit="event.preventDefault();">
+<div class="lg:col-span-3">
+<label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Tanggal Absensi</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">calendar_today</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" type="date" value="2025-03-10">
+</div>
+</div>
+<div class="lg:col-span-3">
+<label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Departemen / Divisi</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">apartment</span>
+<select class="w-full pl-9 pr-8 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 appearance-none">
+<option value="all">Semua Departemen (Head Office &amp; Site)</option>
+<option value="tech">Technology &amp; Product (IT)</option>
+<option value="hr">Human Resources &amp; GA</option>
+<option value="fin">Finance &amp; Accounting</option>
+<option value="ops">Supply Chain &amp; Operations</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="lg:col-span-3">
+<label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Shift Kerja</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">schedule</span>
+<select class="w-full pl-9 pr-8 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 appearance-none">
+<option value="all">Semua Shift Kerja</option>
+<option selected="" value="pagi">Shift Pagi (08:00 - 17:00)</option>
+<option value="middle">Shift Siang (13:00 - 21:00)</option>
+<option value="malam">Shift Malam (21:00 - 06:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="lg:col-span-3 flex items-center gap-2">
+<button class="flex-1 py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm transition-colors" type="submit">
+<span class="material-symbols-outlined text-base">filter_alt</span>
+<span class="">Terapkan Filter</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors" title="Reset filter" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+</div>
+</form>
+</section>
+<!-- 4 Metric Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+<!-- Total Hadir -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between relative">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Total Hadir Hari Ini</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="text-3xl font-bold text-slate-900 tracking-tight">235</span>
+<span class="text-xs text-slate-500">/ 246 Karyawan</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-xs">
+<span class="material-symbols-outlined text-sm text-emerald-600">check_circle</span>
+<span class="font-semibold text-emerald-700">95.5% Tingkat Kehadiran</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-2xl">badge</span>
+</div>
+</div>
+<!-- Terlambat -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between relative">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Terlambat Masuk</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="text-3xl font-bold text-rose-600 tracking-tight">5</span>
+<span class="text-xs text-slate-500 font-medium">Karyawan</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-xs text-slate-600">
+<span class="material-symbols-outlined text-sm text-rose-500">avg_time</span>
+<span class="">Rata-rata delay: <strong class="text-rose-600">12 Menit</strong></span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600">
+<span class="material-symbols-outlined text-2xl">alarm_off</span>
+</div>
+</div>
+<!-- Izin / Cuti -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between relative">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Izin / Sakit / Cuti</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="text-3xl font-bold text-emerald-800 tracking-tight">6</span>
+<span class="text-xs text-slate-500 font-medium">Karyawan</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm text-slate-400">assignment_turned_in</span>
+<span class="">3 Sakit (Surat Dokter), 3 Cuti Tahunan</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700">
+<span class="material-symbols-outlined text-2xl">flight_takeoff</span>
+</div>
+</div>
+<!-- Pending Approval -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between relative">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Pending Approval</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="text-3xl font-bold text-slate-900 tracking-tight">5</span>
+<span class="text-xs text-slate-500 font-medium">Permohonan</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-xs">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold border border-slate-200 text-[11px]">3 Cuti</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold border border-slate-200 text-[11px]">2 Lembur</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-2xl">pending_actions</span>
+</div>
+</div>
+</section>
+<!-- Interactive Nav Tabs Container -->
+<section class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col mb-6">
+<!-- Tab Header -->
+<div class="flex items-center bg-slate-100/80 px-4 pt-2 border-b border-slate-200">
+<div class="flex space-x-1" role="tablist">
+<button class="tab-trigger active px-4 py-2.5 text-xs font-semibold rounded-t-lg bg-white text-emerald-700 border-t-2 border-emerald-600 border-x border-slate-200 -mb-[1px] shadow-xs flex items-center gap-2" id="tabBtn1" type="button">
+<span class="material-symbols-outlined text-base text-emerald-600">fact_check</span>
+<span class="">Rekap Absensi Harian</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">240</span>
+</button>
+<button class="tab-trigger px-4 py-2.5 text-xs font-medium rounded-t-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 transition-colors flex items-center gap-2" id="tabBtn2" type="button">
+<span class="material-symbols-outlined text-base">event_busy</span>
+<span class="">Permohonan Cuti &amp; Izin</span>
+<span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[10px] font-bold">5 Pending</span>
+</button>
+<button class="tab-trigger px-4 py-2.5 text-xs font-medium rounded-t-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 transition-colors flex items-center gap-2" id="tabBtn3" type="button">
+<span class="material-symbols-outlined text-base">work_history</span>
+<span class="">Pengajuan Lembur (Overtime)</span>
+<span class="px-2 py-0.5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold">2 Pending</span>
+</button>
+</div>
+<!-- Right table quick-search -->
+<div class="ml-auto hidden md:flex items-center pb-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">search</span>
+<input class="pl-8 pr-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500" placeholder="Cari nama / NIK..." type="text">
+</div>
+</div>
+</div>
+<!-- TAB 1: REKAP ABSENSI HARIAN -->
+<div class="tab-panel p-4" id="tabContent1">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 text-slate-600 text-[11px] font-bold uppercase tracking-wider border-b border-slate-200">
+<th class="py-3 px-3 rounded-l">Karyawan</th>
+<th class="py-3 px-3">Departemen</th>
+<th class="py-3 px-3">Shift Kerja</th>
+<th class="py-3 px-3">Jam Masuk (In)</th>
+<th class="py-3 px-3">Jam Pulang (Out)</th>
+<th class="py-3 px-3">Keterlambatan</th>
+<th class="py-3 px-3">Status Kehadiran</th>
+<th class="py-3 px-3 text-right rounded-r">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-slate-700 text-xs">
+<!-- Row 1: Hadir Tepat Waktu -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" data-alt="Portrait of an Indonesian professional corporate staff member wearing neat formal office attire with a confident expression in front of soft corporate office backdrop, clean professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-InHI-tt6FsAh2w79QZC57oSAXVjtMrgxjcnmoiaSuZaK2BHU0XE0xR-RO7Vu4oU5RAVSYwiDeSA4yQYKPAIjkja7UgljjWF3tof0c6uVPnbaFSP4_nwRm4NVod5qN-E8NEKNQgCiItmqU7TRARJ3F2Y6P5HDm0qfgHJmZhmlIvJN_qIZdiBILzyzHk5JdGqiuU_dqfVE80A0e5nYrhETohlvyMBsmFJjQs6YdlhvPVUy1-HoFLvFng">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900">Arya Pratama</span>
+<span class="text-[11px] text-slate-500">NIK-2023081</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-medium text-slate-800">Technology &amp; IT</td>
+<td class="py-3 px-3 text-slate-600">Shift Pagi (08:00 - 17:00)</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-semibold text-slate-900">
+<span class="material-symbols-outlined text-sm text-emerald-600">fingerprint</span>
+<span class="">07:51:14</span>
+</div>
+</td>
+<td class="py-3 px-3 text-slate-600">17:04:22</td>
+<td class="py-3 px-3">
+<span class="text-[11px] text-slate-500">- (Tepat Waktu)</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Hadir Tepat Waktu
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors" onclick="openKoreksiModal('Arya Pratama', 'NIK-2023081', '07:51:14', '17:04:22')" title="Koreksi Data Absensi" type="button">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Terlambat Masuk -->
+<tr class="hover:bg-rose-50/40 transition-colors bg-rose-50/20">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" data-alt="Portrait of an Indonesian woman corporate HR specialist smiling gently with professional hijab attire in high-tech corporate office studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi6mT_0fas52puswC2zVsso5B8JNHomeBj94mfWZmB0ypUmFsCl4SR_vvFHBbLssYhMmdmVJ72i824xqufuHvJ1uW3uEMSEBZoxybC9oV1K40xKcNUgVK49r7SuGonLhKGq_vCF8feoMj1aWWxWaWgLfodrjG8OmVaYB5ScxuSzRtvEVSWndZr_g7Vfaa1FTyiR_N49TZj-3NHvT6jnPQVIhXpwhTZ9LjBvpCSjflnL2-GmxB0Mazilg">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900">Siti Rahmawati</span>
+<span class="text-[11px] text-slate-500">NIK-2021045</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-medium text-slate-800">Finance &amp; Tax</td>
+<td class="py-3 px-3 text-slate-600">Shift Pagi (08:00 - 17:00)</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-bold text-rose-600">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="">08:18:05</span>
+</div>
+</td>
+<td class="py-3 px-3 text-slate-400">--:--:--</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[11px] bg-rose-100 text-rose-700 font-bold">
+                  +18 mnt
+                </span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] bg-rose-50 border border-rose-200 text-rose-700 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                  Terlambat
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors" onclick="openKoreksiModal('Siti Rahmawati', 'NIK-2021045', '08:18:05', '--:--:--')" title="Koreksi Data Absensi" type="button">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Dinas Luar Kota -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 font-bold flex items-center justify-center text-xs">
+                    BW
+                  </div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900">Bambang Wijaya</span>
+<span class="text-[11px] text-slate-500">NIK-2019112</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-medium text-slate-800">Operations &amp; Logistik</td>
+<td class="py-3 px-3 text-slate-600">Shift Fleksibel Lapangan</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 text-slate-700 font-medium">
+<span class="material-symbols-outlined text-sm text-emerald-600">location_on</span>
+<span class="">08:02 (GPS)</span>
+</div>
+</td>
+<td class="py-3 px-3 text-slate-600">18:30 (GPS)</td>
+<td class="py-3 px-3">
+<span class="text-[11px] text-slate-500">- (Toleransi Site)</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] bg-slate-100 border border-slate-300 text-slate-800 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                  Dinas Luar
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors" onclick="openKoreksiModal('Bambang Wijaya', 'NIK-2019112', '08:02:00', '18:30:00')" title="Koreksi Data Absensi" type="button">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Izin Sakit -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" data-alt="Portrait of an energetic Indonesian female developer at a workstation smiling professionally in modern glass office setting with subtle ambient blue hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-wKeRZTZ4I9WmnG_OkfPE1qBnuyunl9cRjVAH2Lfl6cYraJ19TnitRKCVjrWH7eEi2oKqHuW4KMo-FG9WR-auT4iHeH3klS5aTWILVX3GdgBDTk-gHvM1182MM_UecBAQKvf2tiYbrpCJpzsHAwOlUblsY1AZ1PdwkdYutmRXyggeTpkVlgXgFlFuKnyH1CgkRkIe4RgZ7YpCQNffKaoJ0NlPMQNNZjYjObn02VrG4FVoNNBvPLQ81A">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900">Nadira Azzahra</span>
+<span class="text-[11px] text-slate-500">NIK-2022199</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-medium text-slate-800">Technology &amp; IT</td>
+<td class="py-3 px-3 text-slate-600">Shift Pagi (08:00 - 17:00)</td>
+<td class="py-3 px-3 text-slate-400">--:--:--</td>
+<td class="py-3 px-3 text-slate-400">--:--:--</td>
+<td class="py-3 px-3">
+<span class="text-[11px] text-slate-500">-</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] bg-slate-100 border border-slate-200 text-slate-600 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                  Izin Sakit (SKD)
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors" onclick="openKoreksiModal('Nadira Azzahra', 'NIK-2022199', '--:--', '--:--')" title="Koreksi Data Absensi" type="button">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Hadir Tepat Waktu -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs">
+                    FH
+                  </div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900">Fauzan Hakim</span>
+<span class="text-[11px] text-slate-500">NIK-2020088</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-medium text-slate-800">Supply Chain</td>
+<td class="py-3 px-3 text-slate-600">Shift Pagi (08:00 - 17:00)</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-semibold text-slate-900">
+<span class="material-symbols-outlined text-sm text-emerald-600">fingerprint</span>
+<span class="">07:44:50</span>
+</div>
+</td>
+<td class="py-3 px-3 text-slate-600">17:15:02</td>
+<td class="py-3 px-3">
+<span class="text-[11px] text-slate-500">- (Tepat Waktu)</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Hadir Tepat Waktu
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors" onclick="openKoreksiModal('Fauzan Hakim', 'NIK-2020088', '07:44:50', '17:15:02')" title="Koreksi Data Absensi" type="button">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Summary Footer -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+<span class="text-xs text-slate-500">
+          Menampilkan <strong class="text-slate-800">1 - 5</strong> dari <strong>240</strong> total data karyawan shift hari ini
+        </span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-xs" type="button">Sebelumnya</button>
+<button class="px-2.5 py-1 rounded bg-emerald-600 text-white text-xs font-bold shadow-xs" type="button">1</button>
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 text-xs" type="button">2</button>
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 text-xs" type="button">3</button>
+<span class="px-1 text-slate-400 text-xs">...</span>
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 text-xs" type="button">48</button>
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-xs" type="button">Selanjutnya</button>
+</div>
+</div>
+</div>
+<!-- TAB 2: PERMOHONAN CUTI & IZIN -->
+<div class="tab-panel p-4 hidden" id="tabContent2">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-sm font-bold text-slate-900">Daftar Pengajuan Cuti &amp; Izin Belum Disetujui</h3>
+<span class="text-xs text-slate-500">SLA Persetujuan: 1x24 Jam</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 text-slate-600 text-[11px] font-bold uppercase tracking-wider border-b border-slate-200">
+<th class="py-3 px-3 rounded-l">Nama Karyawan</th>
+<th class="py-3 px-3">Jenis Permohonan</th>
+<th class="py-3 px-3">Periode Cuti</th>
+<th class="py-3 px-3">Durasi</th>
+<th class="py-3 px-3">Alasan / Catatan</th>
+<th class="py-3 px-3">Atasan Langsung</th>
+<th class="py-3 px-3 text-right rounded-r">Aksi Approval</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-slate-700 text-xs">
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-slate-900">Hendro Prasetyo</span>
+<span class="text-[11px] text-slate-500">IT Infrastructure</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-semibold">Cuti Tahunan</span>
+</td>
+<td class="py-3 px-3 text-slate-800 font-medium">12 Mar 2025 - 14 Mar 2025</td>
+<td class="py-3 px-3 font-semibold text-emerald-700">3 Hari Kerja</td>
+<td class="py-3 px-3 text-slate-500 truncate max-w-xs">Acara keluarga di Jawa Tengah dan keperluan administrasi pribadi.</td>
+<td class="py-3 px-3">Dewi Kartika (Lead)</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex gap-1">
+<button class="px-2.5 py-1 rounded bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 shadow-xs" type="button">Setujui</button>
+<button class="px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-xs font-semibold hover:bg-rose-100" type="button">Tolak</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-slate-900">Agnes Monica Sari</span>
+<span class="text-[11px] text-slate-500">People Operations</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-semibold">Izin Sakit (Rawat)</span>
+</td>
+<td class="py-3 px-3 text-slate-800 font-medium">10 Mar 2025 - 11 Mar 2025</td>
+<td class="py-3 px-3 font-semibold text-emerald-700">2 Hari</td>
+<td class="py-3 px-3 text-slate-500 truncate max-w-xs">Demam tinggi &amp; rujukan istirahat dokter (Lampiran SKD terlampir).</td>
+<td class="py-3 px-3">Rudi Santoso (VP HR)</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex gap-1">
+<button class="px-2.5 py-1 rounded bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 shadow-xs" type="button">Setujui</button>
+<button class="px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-xs font-semibold hover:bg-rose-100" type="button">Tolak</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- TAB 3: PENGAJUAN LEMBUR -->
+<div class="tab-panel p-4 hidden" id="tabContent3">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-sm font-bold text-slate-900">Registrasi Surat Perintah Lembur (SPL)</h3>
+<span class="text-xs text-slate-500">Kalkulasi Tarif PP 35/2021 Otomatis</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 text-slate-600 text-[11px] font-bold uppercase tracking-wider border-b border-slate-200">
+<th class="py-3 px-3 rounded-l">No. SPL</th>
+<th class="py-3 px-3">Pemohon Lembur</th>
+<th class="py-3 px-3">Tanggal &amp; Jam</th>
+<th class="py-3 px-3">Estimasi Durasi</th>
+<th class="py-3 px-3">Uraian Tugas / Scope</th>
+<th class="py-3 px-3">Status</th>
+<th class="py-3 px-3 text-right rounded-r">Tindakan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-slate-700 text-xs">
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-3 font-semibold text-emerald-700">SPL-2025-089</td>
+<td class="py-3 px-3">Dimas Tri Atmojo (Warehouse Ops)</td>
+<td class="py-3 px-3">10 Mar 2025 (17:30 - 20:30)</td>
+<td class="py-3 px-3 font-semibold text-slate-900">3 Jam</td>
+<td class="py-3 px-3 text-slate-500 truncate max-w-xs">Stock Opname akhir kuartal warehouse Cikarang.</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-[11px] font-semibold">Menunggu Manajer</span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-xs" type="button">Tinjau SPL</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- MODAL 1: FORM PENGAJUAN CUTI & IZIN CEPAT -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4" id="modalCuti">
+<div class="bg-white rounded-xl border border-slate-200 shadow-2xl w-full max-w-2xl max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-xl">event_available</span>
+</div>
+<div>
+<h2 class="text-base font-bold text-slate-900">
+              Form Pengajuan Cuti / Izin Karyawan
+            </h2>
+<p class="text-xs text-slate-500">
+              Input permohonan ketidakhadiran resmi dengan validasi kuota otomatis.
+            </p>
+</div>
+</div>
+<button class="p-1 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition-colors" id="closeCutiModalBtn" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Modal Body (Scrollable Form) -->
+<form class="p-6 overflow-y-auto space-y-4" id="formPengajuanCuti" onsubmit="event.preventDefault(); submitCutiForm();">
+<!-- Field 1: Pilih Karyawan -->
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+            Nama Karyawan <span class="text-rose-500">*</span>
+</label>
+<div class="relative bg-slate-50 border border-slate-200 rounded-lg p-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200" data-alt="Portrait of an Indonesian professional corporate staff member wearing neat formal office attire with a confident expression in front of soft corporate office backdrop, clean professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeKtH9ijrtuhPX16ZwUT0y6VqEQb8dtb9g2OubGcsncwVUdPAroS2YLvcTBHfepzCx-0G4Eg3wRdsG0zyxeK_rMgZGvtnDLoNCrxaVVYGOG7_v0AAeOwijc8hs4nmBuIf2X1S0goFt189sKiwr-O-2lkpzpUZbKhtUC2PzDTtQ6vBD9m1sZUiKz6K9uvxveVcD-5ubpmtPXNZBnMFQqsFw7c90WK_znHewI43uc-asdeaJgD9CPZ2d6Q">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-slate-900">Dewi Kartika</span>
+<span class="text-[11px] text-slate-500">NIK-2018002 • Human Resources Lead</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-800">
+<span class="material-symbols-outlined text-sm text-emerald-600">timelapse</span>
+<span class="text-xs font-bold">Sisa Kuota: 8 Hari</span>
+</div>
+</div>
+</div>
+<!-- Field 2: Jenis Cuti -->
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+            Jenis Cuti / Izin <span class="text-rose-500">*</span>
+</label>
+<div class="relative">
+<select class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 appearance-none" id="jenisCutiSelect">
+<option selected="" value="tahunan">Cuti Tahunan (Mengurangi Saldo Kuota Cuti)</option>
+<option value="sakit">Izin Sakit (Wajib Upload Surat Keterangan Dokter)</option>
+<option value="nikah">Cuti Menikah (Hak Spesial 3 Hari Kerja)</option>
+<option value="melahirkan">Cuti Melahirkan (Maternity 90 Hari)</option>
+<option value="khusus">Izin Khusus / Keperluan Mendesak Non-Cuti</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Field 3: Rentang Tanggal & Auto Calculation -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+              Tanggal Mulai <span class="text-rose-500">*</span>
+</label>
+<input class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" id="startDate" type="date" value="2025-03-17">
+</div>
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+              Tanggal Selesai <span class="text-rose-500">*</span>
+</label>
+<input class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" id="endDate" type="date" value="2025-03-19">
+</div>
+</div>
+<!-- Dynamic Calculation Banner -->
+<div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-base">date_range</span>
+<span class="text-xs text-slate-700">Kalkulasi Hari Efektif (Sabtu-Minggu dilewati):</span>
+</div>
+<span class="text-xs font-bold text-emerald-800">Total: 3 Hari Kerja</span>
+</div>
+<!-- Field 4: Alasan Pengajuan -->
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+            Alasan / Catatan Pengajuan <span class="text-rose-500">*</span>
+</label>
+<textarea class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Tuliskan keterangan detail keperluan izin atau kontak darurat jika bepergian..." rows="3"></textarea>
+</div>
+<!-- Field 5: Upload Surat/Bukti Pendukung -->
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+            Upload Surat / Bukti Pendukung (Opsional / Wajib untuk Sakit)
+          </label>
+<div class="p-4 rounded-lg bg-slate-50 border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-2xl text-slate-400 mb-1">cloud_upload</span>
+<span class="text-xs font-semibold text-slate-700">Klik atau seret file PDF / JPG / PNG ke sini</span>
+<span class="text-[11px] text-slate-400 mt-0.5">Maksimal ukuran dokumen 5MB (Hasil scan dokter atau dokumen resmi)</span>
+<input class="hidden" type="file">
+</div>
+</div>
+<!-- Field 6: Approval Workflow Matrix -->
+<div>
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+            Pilihan Atasan Approval (Manager Langsung) <span class="text-rose-500">*</span>
+</label>
+<div class="relative">
+<select class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 appearance-none">
+<option selected="" value="mgr1">Rudi Santoso - VP People &amp; Culture (Head Office)</option>
+<option value="mgr2">Budi Hartono - General Manager Corporate Strategy</option>
+<option value="mgr3">Andi Susilo - Plant Operations Director</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+</form>
+<!-- Modal Footer -->
+<div class="px-6 py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-end gap-2.5">
+<button class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors" id="cancelCutiModalBtn" type="button">
+          Tutup
+        </button>
+<button class="px-4 py-2 rounded-lg bg-emerald-600 text-white text-xs font-semibold shadow-sm hover:bg-emerald-700 transition-colors flex items-center gap-1.5" form="formPengajuanCuti" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+<span class="">Kirim Pengajuan Cuti</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: KOREKSI DATA ABSENSI -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4" id="modalKoreksi">
+<div class="bg-white rounded-xl border border-slate-200 shadow-2xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="px-4 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+<h3 class="text-sm font-bold text-slate-900">Koreksi Log Kehadiran</h3>
+<button class="p-1 rounded-lg text-slate-400 hover:text-slate-700" id="closeKoreksiBtn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 space-y-3">
+<p class="text-xs text-slate-500">
+          Penyesuaian jam scan mesin fingerprint yang rusak atau kegagalan transmisi log:
+        </p>
+<div class="p-2.5 rounded-lg bg-slate-100 border border-slate-200 text-xs text-slate-700">
+<span class="font-bold text-slate-900" id="koreksiTargetName">Nama Karyawan</span> (<span id="koreksiTargetNik" class="">NIK</span>)
+        </div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Koreksi Jam Masuk</label>
+<input class="w-full px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500" id="koreksiInTime" type="time">
+</div>
+<div>
+<label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Koreksi Jam Pulang</label>
+<input class="w-full px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500" id="koreksiOutTime" type="time">
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Nomor Berita Acara / Alasan Koreksi</label>
+<input class="w-full px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-emerald-500" placeholder="Misal: BA Mesin Fingerprint Gedung B offline" type="text">
+</div>
+</div>
+<div class="px-4 py-3 bg-slate-50 border-t border-slate-200 flex justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100" id="cancelKoreksiBtn" type="button">Batal</button>
+<button class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold" onclick="closeKoreksiModal()" type="button">Simpan Koreksi</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tabs Navigation Interactive Behavior
+  const tabBtn1 = document.getElementById('tabBtn1');
+  const tabBtn2 = document.getElementById('tabBtn2');
+  const tabBtn3 = document.getElementById('tabBtn3');
+
+  const tabContent1 = document.getElementById('tabContent1');
+  const tabContent2 = document.getElementById('tabContent2');
+  const tabContent3 = document.getElementById('tabContent3');
+
+  const tabs = [
+    { btn: tabBtn1, content: tabContent1 },
+    { btn: tabBtn2, content: tabContent2 },
+    { btn: tabBtn3, content: tabContent3 }
+  ];
+
+  tabs.forEach(t => {
+    t.btn.addEventListener('click', () => {
+      tabs.forEach(item => {
+        item.btn.classList.remove('active', 'bg-white', 'text-emerald-700', 'border-t-2', 'border-emerald-600', 'border-x', 'border-slate-200', '-mb-[1px]', 'shadow-xs');
+        item.btn.classList.add('text-slate-600');
+        item.content.classList.add('hidden');
+      });
+
+      t.btn.classList.add('active', 'bg-white', 'text-emerald-700', 'border-t-2', 'border-emerald-600', 'border-x', 'border-slate-200', '-mb-[1px]', 'shadow-xs');
+      t.btn.classList.remove('text-slate-600');
+      t.content.classList.remove('hidden');
+    });
+  });
+
+  // Modal Cuti/Izin Triggers
+  const openCutiModalBtn = document.getElementById('openCutiModalBtn');
+  const modalCuti = document.getElementById('modalCuti');
+  const closeCutiModalBtn = document.getElementById('closeCutiModalBtn');
+  const cancelCutiModalBtn = document.getElementById('cancelCutiModalBtn');
+
+  function openCuti() {
+    modalCuti.classList.remove('hidden');
+  }
+
+  function closeCuti() {
+    modalCuti.classList.add('hidden');
+  }
+
+  openCutiModalBtn.addEventListener('click', openCuti);
+  closeCutiModalBtn.addEventListener('click', closeCuti);
+  cancelCutiModalBtn.addEventListener('click', closeCuti);
+
+  modalCuti.addEventListener('click', (e) => {
+    if (e.target === modalCuti) closeCuti();
+  });
+
+  function submitCutiForm() {
+    alert('Permohonan cuti berhasil diregistrasi ke approval matrix!');
+    closeCuti();
+  }
+
+  // Lembur Quick Placeholder Action
+  document.getElementById('openLemburModalBtn').addEventListener('click', () => {
+    tabBtn3.click();
+  });
+
+  // Modal Koreksi Absensi
+  const modalKoreksi = document.getElementById('modalKoreksi');
+  const closeKoreksiBtn = document.getElementById('closeKoreksiBtn');
+  const cancelKoreksiBtn = document.getElementById('cancelKoreksiBtn');
+  const koreksiTargetName = document.getElementById('koreksiTargetName');
+  const koreksiTargetNik = document.getElementById('koreksiTargetNik');
+
+  function openKoreksiModal(name, nik, inTime, outTime) {
+    koreksiTargetName.textContent = name;
+    koreksiTargetNik.textContent = nik;
+    modalKoreksi.classList.remove('hidden');
+  }
+
+  function closeKoreksiModal() {
+    modalKoreksi.classList.add('hidden');
+  }
+
+  closeKoreksiBtn.addEventListener('click', closeKoreksiModal);
+  cancelKoreksiBtn.addEventListener('click', closeKoreksiModal);
+  modalKoreksi.addEventListener('click', (e) => {
+    if (e.target === modalKoreksi) closeKoreksiModal();
+  });
+</script></main><footer class="w-full bg-white border-t border-slate-200 py-4 px-6 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-500 text-xs"><div class="">© 2025 NexaHCMS Enterprise Suite. Version 2.4.0-LTS.</div><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="text-slate-600 font-medium">Status: Connected (Production DB)</span></div></footer></div>
+
+</body></html>
